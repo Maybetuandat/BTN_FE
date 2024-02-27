@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng nhập, Đăng ký, Sửa và Xóa</title>
+<link rel="stylesheet" href="stylesloginandregister.css">  
+</head>
+<body>
+
+<div class="container">
+    <h2>Đăng nhập</h2>
+    <input type="text" id="loginUsername" placeholder="Tên đăng nhập">
+    <input type="password" id="loginPassword" placeholder="Mật khẩu">
+    <input type="button" value="Đăng nhập" onclick="login()">
+    <div> Chưa có tài khoản, <a href="register.html"> đăng kí </a> </div>
+</div>
+<script>
+    var users = [
+    { username: "user1", password: "pass1" },
+    { username: "user2", password: "pass2" }
+];
+
+function login() {
+    var username = document.getElementById("loginUsername").value;
+    var password = document.getElementById("loginPassword").value;
+    var found = users.find(function(user) {
+        return user.username === username && user.password === password;
+    });
+    if (found) {
+        displayUsers();
+    } else {
+        alert("Tên đăng nhập hoặc mật khẩu không đúng!");
+    }
+}
+
+</script>
+</body>
+</html>
