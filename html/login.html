@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hệ Thống Thi Trắc Nghiệm PTIT</title>
-<link rel="stylesheet" href="stylesloginandregister.css">  
+<link rel="stylesheet" href="../css/stylesloginandregister.css">  
 </head>
 <body>
 
@@ -12,10 +12,10 @@
    <!--div cua khoi ten hoc vien  -->
     <div class = "content">
 
-         <img src="logo.png" alt="" height="100px">
-         <div>
-            <h1>HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</h1>
-            <h2>Posts and Telecommunications Institude of Technology</h2>
+         <img src="../img/logo.png" alt="" height="100px">
+         <div class = "name">
+            <h1 >HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</h1>
+            <h2 >Posts and Telecommunications Institude of Technology</h2>
          </div>
     
 
@@ -24,7 +24,10 @@
     <input type="text" id="loginUsername" placeholder="Tên đăng nhập">
     <input type="password" id="loginPassword" placeholder="Mật khẩu">
     <input type="button" value="Đăng nhập" onclick="login()">
-    <div> Chưa có tài khoản, <a href="register.html"> đăng kí </a> </div>
+    <div class="forgotpassword">
+    <span> Chưa có tài khoản, <a href="register.html"> Đăng Ký </a>      </span>
+    <span><a href="forgotpassword.html"> Quên mật khẩu</a></span>
+    </div>
 </div>
 <script>
     var users = [
@@ -39,7 +42,7 @@ function login() {
         return user.username === username && user.password === password;
     });
     if (found) {
-        displayUsers();
+        alert("Tên đăng nhập hoặc mật khẩu  đúng!");
     } else {
         alert("Tên đăng nhập hoặc mật khẩu không đúng!");
     }

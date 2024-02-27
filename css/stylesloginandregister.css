@@ -2,7 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.725);
+}
+.name{
+    color:   rgba(255, 0, 0, 0.725);
 }
 .container {
     max-width: 580px;
@@ -21,12 +24,12 @@ input[type="text"], input[type="password"], input[type="button"] {
     box-sizing: border-box;
 }
 input[type="button"] {
-    background-color: #4caf50;
+    background-color:    rgba(255, 0, 0, 0.725);
     color: white;
     cursor: pointer;
 }
 input[type="button"]:hover {
-    background-color: #45a049;
+    background-color: green;
 }
 .user-list {
     list-style-type: none;
@@ -61,4 +64,11 @@ h1{
 }
 h2{
     font-size: medium;
+}
+.forgotpassword{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
 }

@@ -3,14 +3,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesloginandregister.css">  
+    <link rel="stylesheet" href="../css/stylesloginandregister.css">  
 </head>
-<body>
+
+    <div class="container">
     <h2>Đăng ký</h2>
     <input type="text" id="registerUsername" placeholder="Tên đăng nhập mới">
     <input type="password" id="registerPassword" placeholder="Mật khẩu mới">
     <input type="button" value="Đăng ký" onclick="register()">
     
+</div>
     <script>
         function register() {
     var newUsername = document.getElementById("registerUsername").value;
