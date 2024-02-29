@@ -1,66 +1,163 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kết quả</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/ViewStudentResult.css">
+
 </head>
+
 <body>
-    <div>
-        <!-- Logo ben trai + infor ben phai -->
-        <span>
-            <p>Day la logo hoc vien</p>
-            <!-- Chen anh vao day -->
-        </span>
-        <span>
-            <div>
-                <p>Nguyen anh quan</p>
-                <!-- infor bao gom co the la anh dai dien mac dinh cua nguoi dung, ben canh
-                la ten cua nguoi dung do
-                khi bam vao cho nguoi dung thi hien thi ra xo xuong, co cac lua chon
-                1. Thong tin nguoi dung
-                2. Dang xuat -->
+
+    <div class="header">
+        <div class="nav-logo">
+            <a href="#">
+                <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+            </a>
+        </div>
+        <div class="header-title">
+            <a href="#">PTIT TEST</a>
+        </div>
+
+        <div class="nav">
+            <div class="nav-element"><a href="#">Ngân hàng đề thi</a></div>
+            <div class="nav-element"><a href="#">Kết quả</a></div>
+            <div class="nav-element"><a href="#">Thống kê</a></div>
+            <div class="nav-element"><a href="#">Tin tức</a></div>
+        </div>
+
+        <div class="avt-logo">
+            <a href="#">
+                <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div>
+            <h1>Danh sách sinh viên</h1>
+        </div>
+        <div class="search-bar">
+            <!-- thanh so xuong co 2 lua chon la tim theo ten hay ma sinh vien -->
+            <select name="search" id="search">
+                <option value="name">Tìm theo tên</option>
+                <option value="id">Tìm theo mã sinh viên</option>
+            </select>
+            <input type="text" placeholder="Nhập thông tin muốn tìm kiếm">
+            <button>Tìm kiếm</button>
+        </div>
+        <div class="ngan-cach">
+            <hr>
+            <hr>
+        </div>
+        <div class="detail-list">
+            <table border="1">
+                <tr>
+                    <th>MSV</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Trịnh Vinh Tuấn Đạt</td>
+                    <td>04/09/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <!-- popUp -->
+    <div class="hidden" id="popUp">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Thông tin chi tiết</h3>
             </div>
-        </span>
-    </div>
-    <div>
-        <!-- khoi nay chia thanh 2 phan tim kiem, co the la tim kiem:
-        + theo sinh vien
-        + theo khoa hoc
-        -->
-    </div>
-    <div>
-        <!-- khoi nay lam phan o tim kiem
-        - neu la sinh vien: tim kiem theo ten hoac theo ma sv
-            + co the la co ky hieu tim kiem  + co o nhap text tim kiem
-        - neu la khoa hoc: tim kiem theo ten khoa hoc
-            + co the la co ky hieu tim kiem  + co o nhap text tim kiem
-        + -->
-    </div>
-    <div>
-        <!-- khoi nay de hien thi ket qua tim kiem
-        - neu la sinh vien: hien thi thong tin cua sinh vien
-        - neu la khoa hoc: hien thi thong tin cua khoa hoc
 
-        Thong tin sinh vien co the la:
-        + ten
-        + ma sv
-        + khoa
-        + lop
-        + diem trung binh
-        + phan nao da lam
-        + co the la bieu do diem trung binh qua tung khoa hoc
-        Thong tin khoa hoc co the la:
-        + ten khoa hoc
-        + so luong sinh vien
-        + diem trung binh
-        + so cau hoi
-        + chu de
-        + so luong sinh vien da lam
-        + so luong sinh vien chua lam
-        + so luong sinh vien da lam xong
-        + so luong sinh vien chua lam xong
-        + co the la bieu do diem trung binh qua tung sinh vien
+            <div class="popup-body">
+                <div class="popup-body-left">
+                    
+                </div>
+                <div class="popup-body-right"> nguyen anh quan </div>
+            </div>
 
-        -->
+            <div class="popup-footer">
+                <button class="button-close" onclick="hidePopup()">Đóng</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
 </body>
+<script src="/js/Script.js"></script>
+
 </html>
