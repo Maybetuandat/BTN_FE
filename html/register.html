@@ -2,36 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đăng Ký</title>
     <link rel="stylesheet" href="../css/stylesloginandregister.css">  
+    <script src = "../Script/loginuser.js">
+    
+    </script>
 </head>
 
     <div class="container">
-    <h2>Đăng ký</h2>
-    <input type="text" id="registerUsername" placeholder="Tên đăng nhập mới">
-    <input type="password" id="registerPassword" placeholder="Mật khẩu mới">
-    <input type="button" value="Đăng ký" onclick="register()">
+    <h2 class="dangky">Đăng Ký</h2>
+    <input type="text" id ="registerUsername"   placeholder="Họ và Tên">
+    <input type="text" id = "registerPassword"  placeholder="Email của bạn">    
+    <input type="text"  placeholder="Tên đăng nhập">
+    <input type="text"  placeholder="Mật khẩu mới">
+    <input type="text"  placeholder="Xác nhận lại mật khẩu">
+    <input type="button" value="Đăng ký"   onclick="register()">
     
 </div>
-    <script>
-        function register() {
-    var newUsername = document.getElementById("registerUsername").value;
-    var newPassword = document.getElementById("registerPassword").value;
-    if (newUsername && newPassword) {
-        var exists = users.some(function(user) {
-            return user.username === newUsername;
-        });
-        if (!exists) {
-            users.push({ username: newUsername, password: newPassword });
-            alert("Đăng ký thành công!");
-            displayUsers();
-        } else {
-            alert("Tên đăng nhập đã tồn tại!");
-        }
-    } else {
-        alert("Vui lòng điền đầy đủ thông tin!");
-    }
-}
-    </script>
+   
 </body>
 </html>
