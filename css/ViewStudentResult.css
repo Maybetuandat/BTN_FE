@@ -385,6 +385,8 @@ th {
     align-items: center;
     float: left;
     clear:both;
+    width: 100%;
+    margin-left: 0%;
 }
 .search-bar input {
     padding: 10px;
@@ -392,8 +394,15 @@ th {
     height: 30px;
     border-radius: 5px;
     border: 1px solid black;
-    margin-right: 10px;
+    margin-right: 0px;
     clear: both;
+}
+.search-bar button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
 }
 #search{
     border: black 1px solid;
@@ -409,6 +418,7 @@ th {
 .ngan-cach{
     display: block;
     clear:both;
+    width: 100%;
 }
 
 .hidden {
@@ -416,8 +426,8 @@ th {
 }
 #popUp{
     z-index: 0;
-    width: 100%;
-    height: 100%;
+   width: 100%;
+    min-height: 110%;
     position: absolute;
     background-color: #362c2c84;
     box-shadow: 0 0 10px rgba(207, 20, 20, 0.1);
@@ -459,12 +469,12 @@ th {
 }
 .popup-body-left
 {
-    display: flex;
+    display: block;
     width: 30%;
     height: 50%;
     margin-right: 1%;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px;
     margin-left: 2%;
     border: 1px solid #ccc;
@@ -474,11 +484,12 @@ th {
 {
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     width: 69%;
     height: 100%;
     margin-right: 2%;;
+    font-size: 18px;
     background-color: #fff ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -493,14 +504,32 @@ th {
     font-size: 24px;
     margin-left: 20px;
 }
-.popup-body-right-content-item
-{
-    margin-right: 100px;
-    margin-left: 20px;
-    color: #040404;
+.icon-name{
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+    display: inline-block;
+    /* hien thi cac phan tu vao giua */
+    margin-top: 20px;
 }
-.popup-body-left-content-item{
-    margin-top: 30px;
+.icon-name img
+{
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.icon-name h3
+{
+    margin-top: 20px;
+    text-align: center;
 }
 .popup-footer
 {
@@ -522,4 +551,148 @@ th {
     cursor: pointer;
     display: inline-block;
     margin: auto;
+}
+.ngan-cach-infor{
+    display: block;
+    margin-top: 0;;
+    clear:both;
+    width: 70%;
+    margin-left: 15%;
+}
+.infor-content-div{
+    display: block;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 5%;;
+}
+.content-infor{
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+
+    
+}
+.content-infor p{
+    margin-left: 5% !important;
+    text-align: center !important;
+    justify-content: center;
+}
+
+.course-content {
+    display: block;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.course {
+    margin-left:1%;
+    background-color: #f1f3ea;
+    display: flex;
+    align-items: center;
+    width: 98%;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: auto; 
+    margin-right: 3%;
+    height: 60%;
+}
+.course p{
+    margin-left: 2%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center !important;
+}
+.test-detail {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    background-color: #0d0e0abf;
+    align-items: center;
+}
+.test-detail-content {
+    left:20%;
+    position: relative;
+    width: 60%;
+    height: 96%;
+    margin-top:0.5%;
+    display: block;
+    justify-content: center;
+    background-color: #f3efef;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.test-detail-header {
+    padding-top:2%;
+    display: block;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.test-detail-body {
+    display: block;
+    justify-content: center;
+    margin-top: 0%;
+    margin-bottom: 14%;
+    text-align: center;
+    height: 80%;
+    width: 100%;
+}
+.test-detail-footer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    bottom: 7%;
+}
+.scroll-view {
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+    border: 1px solid #dcdfe7d1;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 15%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #c3c4c680;
+
+}
+
+.infor-test{
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.list-question{
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.question{
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
