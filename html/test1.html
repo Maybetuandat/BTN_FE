@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Filter with Select</title>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<div id="filters">
+  <label for="examFilter">Lọc theo kỳ thi:</label>
+  <select id="examFilter">
+    <option value="All">All</option>
+    <option value="Math">Math</option>
+    <option value="Literature">Literature</option>
+    <option value="Physics">Physics</option>
+    <!-- Thêm các lựa chọn khác nếu cần -->
+  </select> 
+</div>
+
+<br><br>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Exam</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Math</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>Doe</td>
+      <td>Literature</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Smith</td>
+      <td>Physics</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>Jane</td>
+      <td>Math</td>
+      <td>95</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+document.getElementById("examFilter").addEventListener("change", function() {
+  var filter = this.value;
+  alert(filter);
+  var table = document.getElementById("myTable");
+  var rows = table.getElementsByTagName("tr");
+
+  for (var i = 1; i < rows.length; i++) { // Start from 1 to skip header row
+    var examColumn = rows[i].getElementsByTagName("td")[1];
+    
+    if (filter === "all" || examColumn.textContent === filter) {
+      rows[i].style.display = "";
+    } else {
+      rows[i].style.display = "none";
+    }
+  }
+});
+</script>
+
+</body>
+</html>

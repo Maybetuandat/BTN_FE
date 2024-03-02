@@ -1,8 +1,9 @@
 // Dữ liệu mẫu về kết quả của sinh viên
 var studentResults = [
-    { stt: 1, name: 'Nguyễn Văn A', exam: 'Toán', score: 8.5 },
-    { stt: 2, name: 'Trần Thị B', exam: 'Văn', score: 7.2 },
-    { stt: 3, name: 'Phạm Văn C', exam: 'Lý', score: 9.0 },
+    { stt: 1, name: 'Nguyễn Hoàng Hiệp', exam: 'Toán', score: 8.5 },
+    { stt: 2, name: 'Trịnh Vinh Tuấn Đạt', exam: 'Văn', score: 7.2 },
+    { stt: 3, name: 'Hoàng Anh Vũ', exam: 'Lý', score: 9.0 },
+    {stt:4, name:"Nguyễn Anh Quân", exam:"Tin Học", score :10},
     // Thêm dữ liệu khác nếu cần
   ];
   
