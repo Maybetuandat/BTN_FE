@@ -47,15 +47,15 @@
                 <option value="name">Tìm theo tên</option>
                 <option value="id">Tìm theo mã sinh viên</option>
             </select>
-            <input type="text" placeholder="Nhập thông tin muốn tìm kiếm">
-            <button>Tìm kiếm</button>
+            <input type="text" id="myInput" placeholder="Nhập thông tin muốn tìm kiếm">
+            <button onclick="Search()">Tìm kiếm</button>
         </div>
         <div class="ngan-cach">
             <hr>
             <hr>
         </div>
         <div class="detail-list">
-            <table border="1">
+            <table border="1" id="table">
                 <tr>
                     <th>MSV</th>
                     <th>Họ tên</th>
@@ -71,14 +71,14 @@
                     <td><button onclick="showPopup()">Xem chi tiết</button></td>
                 </tr>
                 <tr>
-                    <td>B21DCCN103</td>
+                    <td>B21DCCN105</td>
                     <td>Trịnh Vinh Tuấn Đạt</td>
                     <td>04/09/2003</td>
                     <td>Nam</td>
                     <td><button onclick="showPopup()">Xem chi tiết</button></td>
                 </tr>
                 <tr>
-                    <td>B21DCCN103</td>
+                    <td>B21DCCN105</td>
                     <td>Nguyễn Anh Quân</td>
                     <td>05/03/2003</td>
                     <td>Nam</td>
@@ -130,7 +130,7 @@
 
         </div>
     </div>
-    <div id="popUp">
+    <div id="popUp" class="hidden">
         <div class="popup-content">
             <div class="popup-header">
                 <h2>Thông tin chi tiết</h2>
@@ -184,43 +184,43 @@
                     <div class="course-content">
                         <div class="course">
                             <p>Chương 1: Lập trình cơ bản</p>
-                            <button>
+                            <button onclick="showPopupDetail()">
                                 <a href="#">Xem chi tiết</a>
                             </button>
                         </div>
                         <div class="course">
                             <p>Chương 2: Lập trình cơ bản</p>
-                            <button>
+                            <button onclick="showPopupDetail()">
                                 <a href="#">Xem chi tiết</a>
                             </button>
                         </div>
                         <div class="course">
                             <p>Chương 3: Lập trình cơ bản</p>
-                            <button>
+                            <button onclick="showPopupDetail()">
                                 <a href="#">Xem chi tiết</a>
                             </button>
                         </div>
                         <div class="course">
                             <p>Chương 4: Lập trình cơ bản</p>
-                            <button>
+                            <button onclick="showPopupDetail()">
                                 <a href="#">Xem chi tiết</a>
                             </button>
                         </div>
                         <div class="course">
                             <p>Chương 5: Lập trình cơ bản</p>
-                            <button>
+                            <button onclick="showPopupDetail()">
                                 <a href="#">Xem chi tiết</a>
                             </button>
                         </div>
                         <div class="course">
                             <p>Chương 6: Lập trình cơ bản</p>
-                            <button>
+                            <button onclick="showPopupDetail()">
                                 <a href="#">Xem chi tiết</a>
                             </button>
                         </div>
                         <div class="course">
                             <p>Chương 7: Lập trình cơ bản</p>
-                            <button>
+                            <button onclick="showPopupDetail()">
                                 <a href="#">Xem chi tiết</a>
                             </button>
                         </div>
@@ -233,7 +233,7 @@
             </div>
         </div>
 
-        <div class="test-detail">
+        <div class="hidden2" id="test-detail">
             <div class="test-detail-content">
                 <div class="test-detail-header">
                     <h2 style="color:  rgb(6, 7, 6);">Bài làm chi tiết</h2>
@@ -284,8 +284,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="test-detail-footer ">
-                    <button class="button-close " onclick="hideTestDetail() ">Đóng</button>
+                <div class="test-detail-footer">
+                    <button class="button-close " onclick="hidePopup2()">Xuất file pdf</button>
+                    <button class="button-close " onclick="hidePopup2()">Đóng</button>
                 </div>
             </div>
         </div>
