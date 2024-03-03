@@ -497,7 +497,7 @@
     .popup-footer {
         bottom: 0;
         position: absolute;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         width: 100%;
         display: block;
         justify-content: center;
@@ -709,4 +709,9 @@
     }
     .table-test td {
         border: 1px solid #000000;
+    }
+    .detail-list th{
+        /* background-color:  */
+        background-color: #ad171c;
+        color: white;
     }
