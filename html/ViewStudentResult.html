@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/ViewStudentResult.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="nav-logo">
+            <a href="#">
+                <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+            </a>
+        </div>
+        <div class="header-title">
+            <a href="#">PTIT TEST</a>
+        </div>
+
+        <div class="nav">
+            <div class="nav-element"><a href="#">Ngân hàng đề thi</a></div>
+            <div class="nav-element"><a href="#">Kết quả</a></div>
+            <div class="nav-element"><a href="#">Thống kê</a></div>
+            <div class="nav-element"><a href="#">Tin tức</a></div>
+        </div>
+
+        <div class="avt-logo">
+            <a href="#">
+                <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div>
+            <h1>Danh sách sinh viên</h1>
+        </div>
+        <div class="search-bar">
+            <!-- thanh so xuong co 2 lua chon la tim theo ten hay ma sinh vien -->
+            <select name="search" id="search">
+                <option value="name">Tìm theo tên</option>
+                <option value="id">Tìm theo mã sinh viên</option>
+            </select>
+            <input type="text" id="myInput" placeholder="Nhập thông tin muốn tìm kiếm">
+            <button onclick="Search()">Tìm kiếm</button>
+        </div>
+        <div class="ngan-cach">
+            <hr>
+            <hr>
+        </div>
+        <div class="detail-list">
+            <table border="1" id="table">
+                <tr>
+                    <th>MSV</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN105</td>
+                    <td>Trịnh Vinh Tuấn Đạt</td>
+                    <td>04/09/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN105</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+                <tr>
+                    <td>B21DCCN103</td>
+                    <td>Nguyễn Anh Quân</td>
+                    <td>05/03/2003</td>
+                    <td>Nam</td>
+                    <td><button onclick="showPopup()">Xem chi tiết</button></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div id="popUp" class="hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Thông tin chi tiết</h2>
+            </div>
+
+            <div class="popup-body">
+                <div class="popup-body-left">
+                    <div class="icon-name">
+                        <img src="infor2.png" alt="">
+                        <h3>Nguyễn Anh Quân</h3>
+                    </div>
+                    <hr class="ngan-cach-infor">
+                    <hr class="ngan-cach-infor">
+                    <div class="infor-content-div">
+                        <div class="content-infor">
+                            <img src="https://code.ptit.edu.vn/2020/images/code.png" alt="">
+                            <p><b>Mã sinh viên:</b> B21DCCN103</p>
+                        </div>
+                        <div class="content-infor">
+                            <img src="https://code.ptit.edu.vn/2020/images/class.png" alt="">
+                            <p><b>Lớp:</b> D21CQCN07-B</p>
+                        </div>
+                        <div class="content-infor">
+                            <img src="https://code.ptit.edu.vn/2020/images/mail.png" alt="">
+                            <p><b>Email:</b> QuanNA.B21CN103</p>
+                        </div>
+                        <div class="content-infor">
+                            <img src="https://code.ptit.edu.vn/2020/images/dob.png" alt="">
+                            <p><b>Ngày sinh:</b> 05/03/2003</p>
+                        </div>
+                        <div class="content-infor">
+                            <img src="https://code.ptit.edu.vn/2020/images/sex.png" alt="">
+                            <p><b>Giới tính:</b> Nam</p>
+                        </div>
+                        <div class="content-infor">
+                            <img src="https://code.ptit.edu.vn/2020/images/addr.png" alt="">
+                            <p><b>Địa chỉ:</b> Hà Nội</p>
+                        </div>
+                        <div class=" content-infor">
+                            <img src="https://code.ptit.edu.vn/2020/images/phone.png" alt="">
+                            <p><b>Điện thoại:</b> 0362604886</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" popup-body-right">
+                    <div>
+                        <h3 style="text-align: center;margin-bottom:10px">Danh sách bài thi đã làm</h3>
+                    </div>
+                    <hr class="ngan-cach-infor">
+                    <hr class="ngan-cach-infor">
+                    <div class="course-content">
+                        <div class="course">
+                            <p>Chương 1: Lập trình cơ bản</p>
+                            <button onclick="showPopupDetail()">
+                                <a href="#">Xem chi tiết</a>
+                            </button>
+                        </div>
+                        <div class="course">
+                            <p>Chương 2: Lập trình cơ bản</p>
+                            <button onclick="showPopupDetail()">
+                                <a href="#">Xem chi tiết</a>
+                            </button>
+                        </div>
+                        <div class="course">
+                            <p>Chương 3: Lập trình cơ bản</p>
+                            <button onclick="showPopupDetail()">
+                                <a href="#">Xem chi tiết</a>
+                            </button>
+                        </div>
+                        <div class="course">
+                            <p>Chương 4: Lập trình cơ bản</p>
+                            <button onclick="showPopupDetail()">
+                                <a href="#">Xem chi tiết</a>
+                            </button>
+                        </div>
+                        <div class="course">
+                            <p>Chương 5: Lập trình cơ bản</p>
+                            <button onclick="showPopupDetail()">
+                                <a href="#">Xem chi tiết</a>
+                            </button>
+                        </div>
+                        <div class="course">
+                            <p>Chương 6: Lập trình cơ bản</p>
+                            <button onclick="showPopupDetail()">
+                                <a href="#">Xem chi tiết</a>
+                            </button>
+                        </div>
+                        <div class="course">
+                            <p>Chương 7: Lập trình cơ bản</p>
+                            <button onclick="showPopupDetail()">
+                                <a href="#">Xem chi tiết</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-footer">
+                    <button class="button-close" onclick="hidePopup()">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden2" id="test-detail">
+            <div class="test-detail-content">
+                <div class="test-detail-header">
+                    <h2 style="color:  rgb(6, 7, 6);">Bài làm chi tiết</h2>
+                </div>
+                <div class="test-detail-body">
+                    <div class="scroll-view">
+                        <div class="infor-test">
+                            <div class="infor-stu">
+                                <p>Mã sinh viên: B21DCCN103</p>
+                                <p>Họ và tên: Nguyễn Anh Quân</p>
+                                <p>Lớp: D21CQCN07-B</p>
+                                <p></p>
+                                <p></p>
+                                <p>Kết quả bài thi</p>
+                            </div>
+                            <div class="infor-bai-lam">
+                                <table class="table-test">
+                                    <tr>
+                                        <th>Thời gian bắt đầu</th>
+                                        <th>Thời gian nộp bài</th>
+                                        <th>Tổng thời gian làm bài</th>
+                                        <th>Số câu trả lời đúng</th>
+                                        <th>Điểm</th>
+                                    </tr>
+                                    <tr>
+                                        <td>10:00:00 20/12/2020</td>
+                                        <td>10:30:00 20/12/2020</td>
+                                        <td>30 phút</td>
+                                        <td>20/20</td>
+                                        <td>10</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="list-question">
+                            <div class="question">
+                                <p>Câu 1: Câu hỏi 1</p>
+                                <div class="answer">
+                                    <p>Đáp án A</p>
+                                </div>
+                            </div>
+                            <div class="question">
+                                <p>Câu 2: Câu hỏi 2</p>
+                                <div class="answer">
+                                    <p>Đáp án B</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-detail-footer">
+                    <button class="button-close " onclick="hidePopup2()">Xuất file pdf</button>
+                    <button class="button-close " onclick="hidePopup2()">Đóng</button>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="/js/Script.js "></script>
+
+</html>

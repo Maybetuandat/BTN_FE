@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../public/Icon/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="nav-logo">
+            <a href="#">
+                <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+            </a>
+        </div>
+        <div class="header-title">
+            <a href="#">PTIT TEST</a>
+        </div>
+
+        <div class="nav">
+            <div class="nav-element"><a href="#">Ngân hàng đề thi</a></div>
+            <div class="nav-element"><a href="#">Kết quả</a></div>
+            <div class="nav-element"><a href="#">Thống kê</a></div>
+            <div class="nav-element"><a href="#">Tin tức</a></div>
+        </div>
+
+        <div class="avt-logo">
+            <a href="#">
+                <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <h1>Admin Dashboard</h1>
+        <div class="test-list">
+            <!-- Danh sách bài thi -->
+            <h1 class="title"><i class="ti-book"> </i>Danh sách bài thi</h1>
+
+
+            <a href="/html/upload-test.html">
+                <button class="btn-add">
+                    <i class="ti-plus"></i> Tạo mới</button>
+            </a>
+
+            <div class="test-container" id="test-container">
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="student-list">
+            <!-- Danh sách sinh viên -->
+            <h1 class="title"><i class="ti-user"> </i>Danh sách sinh viên</h1>
+
+
+            <a href="/html/upload-test.html">
+                <button class="btn-add">
+                    <i class="ti-plus"></i> Tạo mới</button>
+            </a>
+
+            <div class="student-container" id="student-container">
+
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="detail-list">
+            <!-- Thống kê về bài thi đã thi -->
+            <h1 class="title"><i class="ti-signal"> </i>Thống kê chi tiết</h1>
+            <!-- Danh sách môn đã thi -->
+            <div class="subject">
+                <h3 class="subject-title">Bài thi số 01</h3>
+                <button onclick="showDetails()">
+                    <i class="ti-info-alt"> </i></button>
+                <a href="../public/Logo_PTIT_University.png" download>
+                    <button ">
+                            <i class=" ti-download"> </i></button>
+                </a>
+
+            </div>
+
+            <div class="subject">
+                <h3 class="subject-title">Bài thi số 02</h3>
+                <button onclick="showDetails()">
+                    <i class="ti-info-alt"> </i></button>
+                <a href="../public/Logo_PTIT_University.png" download>
+                    <button ">
+                            <i class=" ti-download"> </i></button>
+                </a>
+
+
+            </div>
+
+            <div class="subject">
+                <h3 class="subject-title">Bài thi số 03</h3>
+                <button onclick="showDetails()">
+                    <i class="ti-info-alt"> </i></button>
+                <a href="../public/Logo_PTIT_University.png" download>
+                    <button ">
+                        <i class=" ti-download"> </i></button>
+                </a>
+
+
+
+            </div>
+
+            <div class="subject">
+                <h3 class="subject-title">Bài thi số 04</h3>
+                <button onclick="showDetails()">
+                    <i class="ti-info-alt"> </i></button>
+                <a href="../public/Logo_PTIT_University.png" download>
+                    <button ">
+                            <i class=" ti-download"> </i></button>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+<script src="/javascript/Script.js"></script>
+
+
+</html>
