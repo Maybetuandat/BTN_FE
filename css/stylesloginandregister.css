@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 0, 0, 0.725);
+}
+.name{
+    color:   rgba(255, 0, 0, 0.725);
+}
+.link a {
+    text-decoration: none;  
+}
+.git{
+
+        width: 20px;
+        height: 20px;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.container {
+    max-width: 580px;
+    margin: 20px auto;
+    background-color: #fff;
+ 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     position: absolute; 
+    top: 50%; /* Di chuyển phần trên của div xuống 50% từ đỉnh của cửa sổ trình duyệt */
+    left: 50%; /* Di chuyển phần trái của div sang phải 50% từ cạnh trái của cửa sổ trình duyệt */
+    transform: translate(-50%, -50%); /* Dịch chuyển div ngược lại 50% chiều rộng và chiều cao của nó */
+    padding: 60px;
+}
+input[type="text"], input[type="password"], input[type="button"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="button"] {
+    background-color:    rgba(255, 0, 0, 0.725);
+    color: white;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: green;
+}
+.user-list {
+    list-style-type: none;
+    padding: 0;
+}
+.user-list li {
+    margin-bottom: 5px;
+}
+#login {
+   
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    
+}
+.content{
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
+}
+#register{
+    display: flex;
+    text-decoration: none;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;    
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 0px;
+
+}
+
+h1{
+
+        font-size: larger;
+    
+}
+h2{
+    font-size: medium;
+}
+.forgotpassword{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+}
+#dangky{
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration Validation</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<h2>Registration</h2>
+<form id="registrationForm">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <button type="submit">Register</button>
+</form>
+
+<h2>Login</h2>
+<form id="loginForm">
+    <label for="loginUsername">Username:</label><br>
+    <input type="text" id="loginUsername" name="loginUsername"><br>
+    <label for="loginPassword">Password:</label><br>
+    <input type="password" id="loginPassword" name="loginPassword"><br><br>
+    <button type="submit">Login</button>
+</form>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Kiểm tra độ dài tối thiểu của tên người dùng và mật khẩu
+        if (username.length < 5 || password.length < 8) {
+            alert("Tên người dùng cần ít nhất 5 ký tự và mật khẩu cần ít nhất 8 ký tự.");
+            return;
+        }
+
+        // Thực hiện đăng ký (ở đây bạn có thể gửi dữ liệu đăng ký đến máy chủ hoặc lưu trong cơ sở dữ liệu)
+        alert("Đăng ký thành công!");
+        // Reset form
+        document.getElementById("registrationForm").reset();
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var loginUsername = document.getElementById("loginUsername").value;
+        var loginPassword = document.getElementById("loginPassword").value;
+
+        // Kiểm tra thông tin đăng nhập (ở đây bạn có thể thực hiện các kiểm tra bổ sung như kiểm tra tên người dùng tồn tại trong cơ sở dữ liệu và so sánh mật khẩu)
+        if (loginUsername === "" || loginPassword === "") {
+            alert("Vui lòng nhập tên người dùng và mật khẩu.");
+            return;
+        }
+
+        // Thực hiện đăng nhập
+        alert("Đăng nhập thành công!");
+        // Reset form
+        document.getElementById("loginForm").reset();
+    });
+</script>
+
+</body>
+</html>
