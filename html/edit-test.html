@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo mới bài thi</title>
+    <link rel="stylesheet" href="../css/upload-test.css">
+    <link rel="stylesheet" href="../public/Icon/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav-logo">
+            <a href="#">
+                <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+            </a>
+        </div>
+        <div class="header-title">
+            <a href="./index.html">PTIT TEST</a>
+        </div>
+
+        <div class="nav">
+            <div class="nav-element"><a href="#">Ngân hàng đề thi</a></div>
+            <div class="nav-element"><a href="#">Kết quả</a></div>
+            <div class="nav-element"><a href="#">Thống kê</a></div>
+            <div class="nav-element"><a href="#">Tin tức</a></div>
+        </div>
+
+        <div class="avt-logo">
+            <a href="#">
+                <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="option-container">
+            <h1>Chỉnh sửa</h1>
+            <div class="test-description">
+                <form id="description-form">
+                    <label for="examName">Tên bài thi:</label>
+                    <input type="text" required value="Bài thi số 01">
+
+
+                    <div>
+                        <label for="examDescription">Mô tả:</label>
+                        <textarea id="" cols="40"
+                            rows="3">Bài thi giữa kỳ học phần Mạng máy tính nhóm 08 hình thức trắc nghiệm.</textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="select">
+                <form class="option-form" id="option-form">
+
+                    <label for="examType">Loại:</label>
+                    <select id="examType" required>
+                        <option value="time-count">Tính giờ</option>
+                        <option value="free">Tự do</option>
+                    </select>
+                    <br>
+                    <div id="specificTime">
+                        <label for="specificExamTime">Thời gian (phút):</label>
+                        <input type="number" value="60">
+                    </div>
+
+                    <label for="numQuestions">Số lượng câu hỏi:</label>
+                    <input type="number" id="numQuestions" value="3">
+                    <br>
+
+                    <button>
+                        <i class="ti-save" onclick="Save()"></i>
+
+                    </button>
+
+                    <button>
+                        <i class="ti-trash" onclick="Delete()"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="detail-container">
+            <div id="questionsContainer">
+                <div class="question-content" id="1">
+                    <div class="question-container">
+                        <div class="delete-question" onclick="(DeleteQuestion(this.parentNode.parentNode.id))"><i
+                                class="ti-close"></i></div>
+                        <label for="question1">Câu hỏi 1:</label>
+
+                        <textarea id="question1" cols="70" rows="4">Thiết bị Router cho phép:</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="1checkbox1" onclick="toggleCheckbox(this.id)">A</div>
+                        <textarea cols="70" rows="1"
+                            name="question1answer1">Kéo dài 1nhánh LAN thông qua việc khuyếch đại tín hiệu truyền đến nó</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="1checkbox2" onclick="toggleCheckbox(this.id)">B</div>
+                        <textarea cols="70" rows="1"
+                            name="question1answer2">Kết nối nhiều máy tính lại với nhau</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="1checkbox3" onclick="toggleCheckbox(this.id)">C</div>
+                        <textarea cols="70" rows="1"
+                            name="question1answer3">Liên kết nhiều mạng LAN lại với nhau, đồng thời ngăn không cho các packet thuộc loại Broadcast đi qua nó và giúp việc định tuyến cho các packets</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="1checkbox4" onclick="toggleCheckbox(this.id)">D</div>
+                        <textarea cols="70" rows="1" name="question1answer4">Định tuyến cho các packet, chia nhỏ các Collision Domain nhưng không chia nhỏ các Broadcast Domain
+                        </textarea>
+                    </div>
+                </div>
+                <div class="question-content" id="2">
+                    <div class="question-container">
+                        <div class="delete-question" onclick="(DeleteQuestion(this.parentNode.parentNode.id))"><i
+                                class="ti-close"></i></div>
+                        <label for="question2">Câu hỏi 2:</label>
+                        <textarea id="question2" cols="70"
+                            rows="4">Protocol nào được sử dụng cho mạng Internet:</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="2checkbox1" onclick="toggleCheckbox(this.id)">A</div>
+                        <textarea cols="70" rows="1" name="question2answer1">TCP/IP</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="2checkbox2" onclick="toggleCheckbox(this.id)">B</div>
+                        <textarea cols="70" rows="1" name="question2answer2">Netbeui</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="2checkbox3" onclick="toggleCheckbox(this.id)">C</div>
+                        <textarea cols="70" rows="1" name="question2answer3">IPX/SPX</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="2checkbox4" onclick="toggleCheckbox(this.id)">D</div>
+                        <textarea cols="70" rows="1" name="question2answer4">Tất cả</textarea>
+                    </div>
+                </div>
+
+                <div class="question-content" id="3">
+                    <div class="question-container">
+                        <div class="delete-question" onclick="(DeleteQuestion(this.parentNode.parentNode.id))"><i
+                                class="ti-close"></i></div>
+                        <label for="question2">Câu hỏi 3:</label>
+                        <textarea id="question2" cols="70"
+                            rows="4">Các chuẩn JPEG, TIFF, ASCII, EBCDIC do tầng nào của mô hình OSI định nghĩa:</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="3checkbox1" onclick="toggleCheckbox(this.id)">A</div>
+                        <textarea cols="70" rows="1" name="question3answer1">Transport</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="3checkbox2" onclick="toggleCheckbox(this.id)">B</div>
+                        <textarea cols="70" rows="1" name="question3answer2">Network</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="3checkbox3" onclick="toggleCheckbox(this.id)">C</div>
+                        <textarea cols="70" rows="1" name="question3answer3">Application</textarea>
+                    </div>
+                    <div class="answer-container">
+                        <div class="checkbox" id="3checkbox4" onclick="toggleCheckbox(this.id)">D</div>
+                        <textarea cols="70" rows="1" name="question3answer4">Presentation</textarea>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div>
+                <button class="add-btn" onclick="Add()"><i class="ti-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="fix-call">
+            <button><i class="ti-settings"></i></button>
+        </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+<script src="../javascript/edit-test.js"></script>
+
+</html>

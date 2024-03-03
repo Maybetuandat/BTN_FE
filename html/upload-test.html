@@ -5,52 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo mới bài thi</title>
-    <style>
-        /* CSS styles ở đây */
-    </style>
+    <link rel="stylesheet" href="../css/upload-test.css">
+    <link rel="stylesheet" href="../public/Icon/themify-icons-font/themify-icons/themify-icons.css">
+
 </head>
 
 <body>
-    <div class="container">
-        <h1>Tạo mới bài thi</h1>
-        <form id="examForm">
-            <label for="examName">Tên bài thi:</label>
-            <input type="text" required>
+    <div class="header">
+        <div class="nav-logo">
+            <a href="#">
+                <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+            </a>
+        </div>
+        <div class="header-title">
+            <a href="./index.html">PTIT TEST</a>
+        </div>
 
-            <label for="examDescription">Mô tả:</label>
-            <input></input>
+        <div class="nav">
+            <div class="nav-element"><a href="#">Ngân hàng đề thi</a></div>
+            <div class="nav-element"><a href="#">Kết quả</a></div>
+            <div class="nav-element"><a href="#">Thống kê</a></div>
+            <div class="nav-element"><a href="#">Tin tức</a></div>
+        </div>
 
-            <label for="examType">Loại:</label>
-            <select id="examType" required>
-                <option value="free">Tự do</option>
-                <option value="time-count">Tính giờ</option>
-            </select>
-
-            <div id="specificTime" style="display: none;">
-                <label for="specificExamTime">Thời gian(phút):</label>
-                <input type="number">
-            </div>
-
-            <label for="numQuestions">Số lượng câu hỏi:</label>
-            <input type="number" id="numQuestions">
-
-            <div id="questionsContainer"></div>
-
-            <label for="fileOption">Hình thức: </label>
-            <select id="fileOption">
-                <option value="new">Nhập thủ công</option>
-                <option value="upload">Tải lên file</option>
-            </select>
-
-            <div id="fileUpload" style="display: none;">
-                <label for="excelFile">Tải lên tệp (Excel):</label>
-                <input type="file" id="excelFile" name="excelFile" accept=".xls,.xlsx">
-            </div>
-
-            <button type="submit">Tạo bài thi</button>
-        </form>
+        <div class="avt-logo">
+            <a href="#">
+                <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+            </a>
+        </div>
     </div>
 
+    <div class="container">
+        <div class="option-container">
+            <h1>Tạo mới bài thi</h1>
+            <div class="test-description">
+                <form id="description-form">
+                    <label for="examName">Tên bài thi:</label>
+                    <input type="text" required>
+
+
+                    <div>
+                        <label for="examDescription">Mô tả:</label>
+                        <textarea id="" cols="40" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="select">
+                <form class="option-form" id="option-form">
+
+                    <label for="examType">Loại:</label>
+                    <select id="examType" required>
+                        <option value="free">Tự do</option>
+                        <option value="time-count">Tính giờ</option>
+                    </select>
+                    <br>
+                    <div id="specificTime" style="display: none;">
+                        <label for="specificExamTime">Thời gian (phút):</label>
+                        <input type="number">
+                    </div>
+
+                    <label for="numQuestions">Số lượng câu hỏi:</label>
+                    <input type="number" id="numQuestions">
+                    <br>
+
+
+                    <label for="fileOption">Hình thức: </label>
+                    <select id="fileOption">
+                        <option value="new">Nhập thủ công</option>
+                        <option value="upload">Tải lên file</option>
+                    </select>
+                    <br>
+                    <div id="fileUpload" style="display: none;">
+                        <label for="excelFile">Tải lên tệp (Excel):</label>
+                        <input type="file" id="excel-file" name="excelFile" accept=".xls,.xlsx">
+                    </div>
+
+                    <button type="submit">Tạo bài thi</button>
+                    <button onclick="Save()">
+                        <i class="ti-save"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="detail-container">
+            <div id="questionsContainer">
+
+                <div class="empty-text">
+
+                </div>
+
+            </div>
+
+            <div>
+                <button class="add-btn" onclick="Add()"><i class="ti-plus"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="fix-call">
+        <button><i class="ti-settings"></i></button>
+    </div>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>

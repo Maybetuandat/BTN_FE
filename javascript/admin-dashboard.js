@@ -62,10 +62,14 @@ subjects.forEach(function (subject, index) {
 
     var editCell = row.insertCell();
     var editButton = document.createElement("button");
+    var editLink = document.createElement("a");
+    editLink.href = "./edit-test.html";
+
     var editIcon = document.createElement("i");
     editIcon.classList.add("ti-pencil");
     editButton.appendChild(editIcon);
-    editCell.appendChild(editButton);
+    editLink.appendChild(editButton);
+    editCell.appendChild(editLink);
 
     // Thêm nút xóa vào hàng
     var deleteCell = row.insertCell();
@@ -128,14 +132,13 @@ students.forEach(function (student, index) {
     var editButton = document.createElement("button");
     var editIcon = document.createElement("i");
     editIcon.classList.add("ti-pencil");
+    editButton.onclick = function () {
+        openPopUp('edit-student');
+    }
     editButton.appendChild(editIcon);
     editCell.appendChild(editButton);
 
-    // Thêm sự kiện cho nút chỉnh sửa
-    editButton.onclick = function () {
-        // Thêm logic xử lý khi nhấn vào nút chỉnh sửa ở đây
-        alert("Bạn đã nhấn vào nút Chỉnh sửa");
-    };
+
 
     // Thêm nút xóa vào hàng
     var deleteCell = row.insertCell();
@@ -172,14 +175,16 @@ async function showDetails() {
     await initializeChart();
 }
 
+function openPopUp(id) {
+    var details = document.getElementById(id);
+    details.style.display = 'block';
+}
 
-function closePopUp() {
-
-    // Lấy phần tử chứa đồ thị
+function closePopUp(id) {
     var chartElement = document.getElementById('bar-chart');
-    // Xóa nội dung của phần tử chứa đồ thị
     chartElement.innerHTML = '';
-    var details = document.getElementById('myModal');
+    var details = document.getElementById(id);
     details.style.display = 'none';
 
 }
+

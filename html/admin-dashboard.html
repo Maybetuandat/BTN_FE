@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/admin-dashboard.css">
     <link rel="stylesheet" href="../public/Icon/themify-icons-font/themify-icons/themify-icons.css">
 
 </head>
@@ -56,22 +56,28 @@
         </div>
 
         <hr>
-
+        <button class="view-all-btn">Xem tất cả <i class="ti-angle-double-right"></i></button>
+        <hr>
         <div class="student-list">
             <!-- Danh sách sinh viên -->
             <h1 class="title"><i class="ti-user"> </i>Danh sách sinh viên</h1>
 
 
-            <a href="/html/upload-test.html">
-                <button class="btn-add">
-                    <i class="ti-plus"></i> Tạo mới</button>
-            </a>
+
+            <button class="btn-add" onclick="openPopUp('add-new-student')">
+                <i class="ti-plus"></i> Tạo mới</button>
+
 
             <div class="student-container" id="student-container">
 
             </div>
 
+
+
         </div>
+
+        <hr>
+        <button class="view-all-btn">Xem tất cả <i class="ti-angle-double-right"></i></button>
         <hr>
 
         <div class="detail-list">
@@ -127,7 +133,77 @@
 
         </div>
 
+        <!-- Create new SinhVien -->
 
+        <div class="add-new-student" id="add-new-student">
+            <div class="add-new-student-container">
+
+                <h1>Tạo mới sinh viên</h1>
+                <div>
+                    <label>Mã sinh viên</label>
+                    <input type="text" required>
+                </div>
+
+                <div>
+                    <label>Họ và tên</label>
+                    <input type="text" required>
+                </div>
+
+                <div>
+                    <label>Lớp</label>
+                    <input type="text" required>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div>
+                    <label>Mật khẩu</label>
+                    <input type="password" required>
+                </div>
+
+                <div>
+                    <button onclick="closePopUp('add-new-student')">Tạo mới</button>
+                    <button onclick="closePopUp('add-new-student')">Hủy</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Edit student information -->
+        <div class="edit-student" id="edit-student">
+            <div class="edit-student-container">
+
+                <h1>Chỉnh sửa thông tin</h1>
+                <div>
+                    <label>Mã sinh viên</label>
+                    <input type="text" value="B21DCCN795" required>
+                </div>
+
+                <div>
+                    <label>Họ và tên</label>
+                    <input type="text" value="Hoàng Anh Vũ">
+                </div>
+
+                <div>
+                    <label>Lớp</label>
+                    <input type="text" value="D21CQCN03-B">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" value="VuHA.B21CN795@stu.ptit.edu.vn">
+                </div>
+                <div>
+                    <label>Mật khẩu</label>
+                    <input type="password" value="000000000" required>
+                </div>
+
+                <div>
+                    <button onclick="closePopUp('edit-student')">Lưu</button>
+                    <button onclick="closePopUp('edit-student')">Hủy</button>
+                </div>
+            </div>
+        </div>
 
         <!-- Modal -->
         <div id="myModal" class="modal">
@@ -135,7 +211,7 @@
 
                 <div class="container">
                     <div class="close-btn" id="cls-btn">
-                        <span onclick="closePopUp()"> X </span>
+                        <span onclick="closePopUp('myModal')"> X </span>
                     </div>
                     <div class="infor-detail">
                         <div class="infor">
@@ -201,7 +277,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 <script src="../javascript/chart.js"></script>
-<script src="/javascript/index.js"></script>
+<script src="/javascript/admin-dashboard.js"></script>
 
 
 </html>

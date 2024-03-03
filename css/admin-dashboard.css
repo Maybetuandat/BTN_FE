@@ -18,7 +18,7 @@ body {
 }
 
 .yellow-text {
-    color: red;
+    color: #ad171c;
 }
 
 .green-text {
@@ -189,6 +189,70 @@ button:hover {
     display: none;
 }
 
+.add-new-student,
+.edit-student {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-new-student-container,
+.edit-student-container {
+    /* position: fixed; */
+    width: 600px;
+    height: 600px;
+    margin: 100px auto;
+    padding: 80px;
+
+    background-color: #fffbfb;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.add-new-student-container h1,
+.edit-student-container h1 {
+    font-size: 26px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.add-new-student-container label,
+.edit-student-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-new-student-container input,
+.edit-student-container input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-new-student-container button,
+.edit-student-container button {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.view-all-btn {
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .modal {
     display: none;
     /* Mặc định ẩn modal */
@@ -206,9 +270,9 @@ button:hover {
 
 .modal-content {
     position: relative;
-    max-width: 1000px;
+    max-width: 800px;
     height: 800px;
-    margin: 100px auto;
+    margin: 80px auto;
     padding: 100px;
 
     background-color: #fffbfb;
@@ -311,7 +375,7 @@ table {
 
 th,
 td {
-    padding: 8px;
+    padding: 12px;
 
     border-bottom: 1px solid #ddd;
 }
