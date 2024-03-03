@@ -1,75 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thêm dữ liệu vào bảng HTML bằng JavaScript</title>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thống kê kết quả kỳ thi</title>
+  <link rel="stylesheet" href="../css/static.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
 
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: center; /* Căn giữa nội dung trong ô */
-}
-
-thead th {
-  text-align: center; /* Căn giữa nội dung trong ô header */
-}
-</style>
 </head>
 <body>
+  <h1>Bảng thống kê tổng hợp kết quả của sinh viên</h1>
+  <div id="filters">
+    <label for="examFilter">Lọc theo kỳ thi:</label>
+    <select id="examFilter">
+      <option value="all">Tất cả</option>
+      <option value="toan">Toán</option>
+      <option value="van">Văn</option>
+      <option value="ly">Lý</option>
+      <!-- Thêm các lựa chọn khác nếu cần -->
+    </select>
+  </div>
 
-<table class="display" id="example" style="width: 100%;">
-  	<thead id="tableHead">
-      <!-- Header sẽ được tạo bằng JavaScript -->
-  	</thead>
-  <tbody id="tableBody">
-      <!-- Dữ liệu sẽ được thêm vào đây -->
-  </tbody>
-</table>
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Kỳ thi</th>
+        <th>Điểm</th>
+      </tr>
+    </thead>
+    <tbody id="resultsBody">
+      <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+    </tbody>
+  </table>
 
-<script>
-// Dữ liệu mẫu cho header và dữ liệu
-var headerData = ["Stt", "Mã môn học", "Tên", "Số tín chỉ", "Điểm"];
-var data = [
-    ["1", "MH001", "Môn học A", "4", "9.5"],
-    ["2", "MH002", "Môn học B", "3", "8.0"],
-    ["3", "MH003", "Môn học C", "2", "7.5"]
-];
+  <div id="statistics">
+    <h2>Thống kê</h2>
+    <p>Tổng số lần tham gia: <span id="totalStudents"></span></p>
+    <p>Tỷ lệ hoàn thành: <span id="completionRate"></span></p>
+    <p>Điểm trung bình: <span id="averageScore"></span></p>
+    <canvas id="scoreChart" width="400" height="200"></canvas>
+  </div>
 
-// Lấy tham chiếu đến thead và tbody
-var tableHead = document.getElementById("tableHead");
-var tableBody = document.getElementById("tableBody");
-
-// Tạo header từ dữ liệu mẫu
-var headerRow = document.createElement("tr");
-headerData.forEach(function(cellData) {
-    var cell = document.createElement("th");
-    cell.textContent = cellData;
-    headerRow.appendChild(cell);
-});
-tableHead.appendChild(headerRow);
-
-// Thêm dữ liệu từ mảng vào bảng
-data.forEach(function(rowData) {
-    // Tạo một hàng mới
-    var row = document.createElement("tr");
-
-    // Thêm các ô/cột vào hàng mới
-    rowData.forEach(function(cellData) {
-        var cell = document.createElement("td");
-        cell.textContent = cellData;
-        row.appendChild(cell);
-    });
-
-    // Thêm hàng mới vào tbody
-    tableBody.appendChild(row);
-});
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../script/script.js"></script>
+  <button onclick="exportToPDF()">Xuất báo cáo PDF</button>
+<button onclick="exportToExcel()">Xuất báo cáo Excel</button>
 
 </body>
 </html>

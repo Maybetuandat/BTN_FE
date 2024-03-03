@@ -4,55 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistic</title>
     <link rel="stylesheet" href="../css/static.css">
-    <script src="../Script/static.js"> </script>
+   
 </head>
 <body>
-    <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search..." autocomplete="off">
-<div class="table-responsive">
-	<table class="display" id="example" style="width: 100%;">
-  	<thead>
-      <tr  class="header">
-        <th>Stt</th>
-        <th>Mã môn học</th>
-        <th>Tên</th>
-        <th>Số tín chỉ</th>
-        <th>Điểm</th>
-      </tr>
-  	</thead>
-  <tbody>
-    <tr>
-      <td>Tiger Nixon</td>
-      <td>2011/04/25</td>
-      <td>$320,800</td>
-    </tr>
-    <tr>
-      <td>Garrett Winters</td>
-      <td>2011/07/25</td>
-      <td>$170,750</td>
-    </tr>
-    <tr>
-      <td>Ashton Cox</td>
-      <td>2009/01/12</td>
-      <td>$86,000</td>
-    </tr>
-    <tr>
-      <td>Cedric Kelly</td>
-      <td>2012/03/29</td>
-      <td>$433,060</td>
-    </tr>
-    <tr>
-      <td>Airi Satou</td>
-      <td>2008/11/28</td>
-      <td>$162,700</td>
-    </tr>
-    <tr>
-      <td>Brielle Williamson</td>
-      <td>2012/12/02</td>
-      <td>$372,000</td>
-    </tr>
-    ...
-  </tbody>
-</table>
-</div>
+    <!-- thanh tìm kiếm -->
+    <div>Filter</div>
+    <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search..." autocomplete="on"> 
+    
+    <!-- bảng hiển thị thống kê -->
+    <table class="display" id="example" style="width: 100%;">
+            <thead id="tableHead"> </thead>
+            <tbody id="tableBody" > </tbody>
+            
+    </table>
+    <script src="../script/static.js"> </script>
 </body>
 </html>
