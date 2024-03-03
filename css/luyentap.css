@@ -30,7 +30,7 @@
     /* margin-top: 50px; */
     margin-bottom: 50px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     #container {
         width: 100%; 
     }
@@ -62,7 +62,7 @@
     width: 100%;
     margin-right: auto;
     background-color: white;
-    height: 500px;
+    height: 70vh;
     overflow-y: auto;
     border: 2px solid #dedbdc;
     border-top: none;
