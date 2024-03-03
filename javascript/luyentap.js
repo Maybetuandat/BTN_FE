@@ -73,6 +73,7 @@ hideShow = (x) => {
                     container_monthi[i].style.display = 'none';
                 }
             }
+        
 }
 
 
@@ -83,8 +84,10 @@ showLuyentap = () => {
         thi.style.display = 'none';
         localStorage.setItem('setTime', 0);
 
-        document.getElementById('btn-lt').style.background = 'white';
-        document.getElementById('btn-thi').style.background = '#f0f0f0';
+        document.getElementById('btn-lt').style.background = '#ad171c';
+        document.getElementById('btn-lt').style.color = 'white';
+        document.getElementById('btn-thi').style.background = 'white';
+        document.getElementById('btn-thi').style.color = 'black';
 }
 
 showThi = () => {
@@ -94,8 +97,10 @@ showThi = () => {
         thi.style.display = 'block';
         localStorage.setItem('setTime', 1);
 
-        document.getElementById('btn-thi').style.background = 'white';
-        document.getElementById('btn-lt').style.background = '#f0f0f0';
+        document.getElementById('btn-thi').style.background = '#ad171c';
+        document.getElementById('btn-lt').style.background = 'white';
+        document.getElementById('btn-lt').style.color = 'black';
+        document.getElementById('btn-thi').style.color = 'white';
 }
 
 let trangthai = localStorage.getItem('setTime');

@@ -1,42 +1,6 @@
 var users = [
-    { username: "user1", password: "pass1" },
-    { username: "user2", password: "pass2" }
+    { username: "admin", password: "123456" }
 ];
-function register() {
-   
-    var newUsername = document.getElementById("registerUsername").value;
-    var newPassword = document.getElementById("registerPassword").value;
-    if (newUsername && newPassword) 
-    {
-        // kiểm tra xem mật khẩu có đạt yêu cầu không, tài khoản không được có kí tự đậc biệt
-        if(!isvaliduser(newUsername))
-        {
-            window.location.href = "../html/register.html";
-            return;
-        }
-        if(!isValidPassword(newPassword))
-        {
-            alert("Mật khẩu không hợp lệ ! Mật khẩu phải đầy đủ kí tự thường, in hoa, kí tự đặc biệt");
-            window.location.href = "../html/register.html";
-            return;
-        }
-
-
-        var exists = users.some(function(user) {
-            return user.username === newUsername;
-        });
-        if (!exists) {
-            users.push({ username: newUsername, password: newPassword });
-            window.location.href = "../html/loginuser.html";  
-        } else 
-        {
-            window.location.href = "../html/register.html";
-            
-        }
-    } else {
-        alert("Vui lòng điền đầy đủ thông tin!");
-    }
-}
 function login() {
     var username = document.getElementById("loginUsername").value;
     var password = document.getElementById("loginPassword").value;
@@ -51,10 +15,8 @@ function login() {
         return user.username === username && user.password === password;
     });
     if (found) {
-        alert("Tên đăng nhập hoặc mật khẩu  đúng!");
-        window.location.href = "../html/luyentap.html"; // điều hướng ra trang admin
+        window.location.href = "../html/admin-dashboard.html"; // điều hướng ra trang admin
     } else {
-        alert("Tên đăng nhập hoặc mật khẩu không đúng!"); 
         document.getElementById("loginUsername").value = "";  // xóa kí tự tài khoản vừa nhập
         document.getElementById("loginPassword").value = ""; 
     }

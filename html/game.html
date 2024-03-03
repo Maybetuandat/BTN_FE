@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Trắc nghiệm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="../css/game.css" />
-  </head>
-  <body>
-    
-    <div class="container">
-      <div id="container-subject">
-        <div id="subject"></div>
-        <button id="btn-thoat" onclick="thoat()">Thoát</button>
-      </div>
-      <div id="cauhoi"></div>
-      <div id="action">
-        <p>Thời gian làm bài: </p>
-        <div id="countdown" class="div_right"></div>
-        <button id="btn-nopbai" onclick="nopbai()">Nộp bài</button>
-        <div id="trangthai"></div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Trắc nghiệm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../css/game.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="container-subject">
+      <div id="subject"></div>
     </div>
-    
-    <script src="../javascript/game.js"></script>
-  </body>
+    <div id="cauhoi"></div>
+    <div id="action">
+      <p>Thời gian làm bài: </p>
+      <div id="countdown" class="div_right"></div>
+
+      <div id="trangthai"></div>
+      <button id="btn-nopbai" onclick="nopbai()">Nộp bài</button>
+      <button id="btn-nopbai" onclick="thoat()">Thoát</button>
+    </div>
+  </div>
+
+  <script src="../javascript/game.js"></script>
+</body>
+
 </html>

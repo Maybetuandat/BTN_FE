@@ -130,7 +130,7 @@
 
         </div>
     </div>
-    <div id="popUp" class="hidden">
+    <div id="popUp" class="fade-in">
         <div class="popup-content">
             <div class="popup-header">
                 <h2>Thông tin chi tiết</h2>
@@ -233,13 +233,13 @@
             </div>
         </div>
 
-        <div class="hidden2" id="test-detail">
+        <div class="hidden2 bounce" id="test-detail">
             <div class="test-detail-content">
                 <div class="test-detail-header">
                     <h2 style="color:  rgb(6, 7, 6);">Bài làm chi tiết</h2>
                 </div>
-                <div class="test-detail-body">
-                    <div class="scroll-view">
+                <div class="test-detail-body" id="pdf">
+                    <div class="scroll-view" id="scroll-view">
                         <div class="infor-test">
                             <div class="infor-stu">
                                 <p>Mã sinh viên: B21DCCN103</p>
@@ -262,8 +262,8 @@
                                         <td>10:00:00 20/12/2020</td>
                                         <td>10:30:00 20/12/2020</td>
                                         <td>30 phút</td>
-                                        <td>20/20</td>
-                                        <td>10</td>
+                                        <td>3/5</td>
+                                        <td>6</td>
                                     </tr>
                                 </table>
                             </div>
@@ -272,25 +272,117 @@
                             <div class="question">
                                 <p>Câu 1: Câu hỏi 1</p>
                                 <div class="answer">
-                                    <p>Đáp án A</p>
+                                    <p>A. Đáp án A</p>
                                 </div>
+                                <div class="wrong">
+                                    <p>B. Đáp án B</p>
+                                </div>
+                                <div class="answer">
+                                    <p>C. Đáp án C</p>
+                                </div>
+                                <div class="right">
+                                    <p>D. Đáp án D</p>
+                                </div>
+                                <textarea name="text-comment" class="hidden" id="comment2" cols="30"
+                                    rows="10"></textarea>
                             </div>
+                            <hr>
                             <div class="question">
                                 <p>Câu 2: Câu hỏi 2</p>
                                 <div class="answer">
-                                    <p>Đáp án B</p>
+                                    <p>A. Đáp án A</p>
+                                </div>
+                                <div class="answer">
+                                    <p>B. Đáp án B</p>
+                                </div>
+                                <div class="answer">
+                                    <p>C. Đáp án C</p>
+                                </div>
+                                <div class="right">
+                                    <p>D. Đáp án D</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="question">
+                                <p>Câu 3: Câu hỏi 3</p>
+                                <div class="answer">
+                                    <p>A. Đáp án A</p>
+                                </div>
+                                <div class="wrong">
+                                    <p>B. Đáp án B</p>
+                                </div>
+                                <div class="answer">
+                                    <p>C. Đáp án C</p>
+                                </div>
+                                <div class="right">
+                                    <p>D. Đáp án D</p>
+                                </div>
+                                <textarea name="text-comment" class="hidden" id="comment1" cols="30"
+                                    rows="10"></textarea>
+                            </div>
+                            <hr>
+                            <div class="question">
+                                <p>Câu 4: Câu hỏi 4</p>
+                                <div class="answer">
+                                    <p>A. Đáp án A</p>
+                                </div>
+                                <div class="answer">
+                                    <p>B. Đáp án B</p>
+                                </div>
+                                <div class="answer">
+                                    <p>C. Đáp án C</p>
+                                </div>
+                                <div class="right">
+                                    <p>D. Đáp án D</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="question">
+                                <p>Câu 5: Câu hỏi 5</p>
+                                <div class="answer">
+                                    <p>A. Đáp án A</p>
+                                </div>
+                                <div class="answer">
+                                    <p>B. Đáp án B</p>
+                                </div>
+                                <div class="answer">
+                                    <p>C. Đáp án C</p>
+                                </div>
+                                <div class="right">
+                                    <p>D. Đáp án D</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="test-detail-footer">
-                    <button class="button-close " onclick="hidePopup2()">Xuất file pdf</button>
-                    <button class="button-close " onclick="hidePopup2()">Đóng</button>
+                    <button class="button-close" id="them-nhan-xet" onclick="showComment()">Thêm nhận xét</button>
+                    <button class="button-close hidden" id="gui-nhan-xet" onclick="showComment()">Gửi nhận xét</button>
+                    <button class="button-close" id="xoa-nhan-xet" onclick="hideComment()">Xóa hết nhận xét</button>
+                    <button class="button-close" onclick="exportToPDF()">Xuất file pdf</button>
+                    <button class="button-close" onclick="hidePopup2()">Đóng</button>
                 </div>
             </div>
         </div>
 </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+    function exportToPDF() {
+        const element = document.getElementById("pdf");
+        console.log(element);
+        const options = {
+            margin: 10,
+            filename: 'exported-document.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 1 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf(element, options);
+    }
+</script>
 <script src="/js/Script.js "></script>
 
 </html>

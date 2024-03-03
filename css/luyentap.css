@@ -17,12 +17,17 @@
     /* border-radius: 0.5rem; */
     font-size: 15px;
     cursor: pointer;
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 5px;
+    height: 40px;
+    width: 10%;
+    justify-content: center;
 }
 
 #container {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 80%;
     padding: 20px;
     padding-top: 100px;
     margin-left: auto;
@@ -43,17 +48,20 @@
 }
 .btn-tt {
     width: 50%;
-    background-color: #f0f0f0;
+    background-color: #cd3030;
     /* border: none; */
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    height: 3rem;
-    font-size: large;
+    font-size: 22px;
+    height: 60px;
     font-weight: 600;
     cursor: pointer;
-    border: 2px solid #dedbdc;
-    border-top: none;
-    border-bottom: none;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px ;
+    border-top: 2px solid #dedbdc;
+    border-right: 2px solid #dedbdc;
+    border-left: 2px solid #dedbdc;
+    border-bottom: 2px solid #dedbdc;
+    
+    box-shadow: 10px 10px 10px grey;
 }
 
 #container-luyentap, #container-thi {
@@ -62,11 +70,13 @@
     width: 100%;
     margin-right: auto;
     background-color: white;
-    height: 500px;
+    min-height: 800px;
     overflow-y: auto;
     border: 2px solid #dedbdc;
     border-top: none;
-    border-bottom: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+    margin-bottom: 100px;;
 }
 
 /* #container-thi {
@@ -78,36 +88,78 @@
 .container-monthi {
     display: flex;
     width: 100%;
+    background-color: rgba(61, 250, 71, 0.34);
+    /* height: 20px; */
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px;
+    height: 60px;
+    border-radius: 5px;
+    font-weight: 100;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgb(163, 210, 210);
+    /* margin-left: 20px; */
+}
+.detail-monthi {
+    display: flex;
+    width: 100%;
+    height: 100px;
     background-color: white;
     /* height: 20px; */
     border: 1px solid #ddd;
     position: relative;
     padding: 10px;
-    margin-bottom: auto;
+    margin-bottom: 100px;
     font-weight: 100;
     /* margin-left: 20px; */
 }
-
 .kythi,.luyentap {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 95%;
     padding: 10px;
-    background-color: #f0f0f0;
-    margin-top: 10px;
+    background-color: #b5fff081;
+    margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
     font-weight: 600;
     border: 2px solid #dedbdc;
     border-top: none;
     border-bottom: none;
+    border-radius: 10px;
+    min-height: 70px;
+    box-shadow: 3px 3px 3px grey;
 }
-
+.luyentap p{
+    margin-right: auto;
+    width: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.kythi p{
+    margin-right: auto;
+    width: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .btn-xem {
     margin-left: auto;
-    width: 20%;
-    border: 1px solid #d4d4d4;
+    width: 15%;
+    height: 50px;
+    border: 1px solid #df8ea9;
     cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background-color: #ad171c;
+    box-shadow: 3px 3px 3px grey;
 }
 
 p {
@@ -116,19 +168,22 @@ p {
 }
 
 #myInput {
-    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYFitaxaef3Jny9Bt3VLcqD2Q3dfaxwGzV6ZowVje-iEatF9TZhxnxXeHiep3hlFaoMy_4ym_eosCZN3CifeNzK9Ys6-6wpIA53twYGvgsmA-o7fE5bKSEJNa38skej0p-DSKxTmQH53_0/s16000/search_icon.png'); 
-    background-position: 8px 8px;
+    background-position: auto;
+    background-image:none;
     background-repeat: no-repeat;
+    justify-items: center;
     background-color: white;
-    width: 100%; 
-    font-size: 16px; 
-    padding: 7px 10px 7px 40px; 
+    width: 100%;
+    font-size: 18px;
+    margin-top: 0px;
+    height: 60px;
+    padding: 7px 10px 7px 40px;
     /* border: none; */
     border: 2px solid #dedbdc;
-    border-top: none;
-    border-bottom: none;
-    margin-bottom: 10px;  
+    margin-bottom: 15px;  
     /* border-radius: 5px; */
+    
+    box-shadow: 10px 10px 10px grey;
 }
 
 

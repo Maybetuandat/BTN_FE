@@ -33,6 +33,8 @@ function hidePopup() {
   }
 }
 function showPopupDetail(){
+  var scrollableDiv = document.getElementById("scroll-view");
+      scrollableDiv.scrollTop = 0;
   var popUp = document.getElementById("test-detail");
   console.log(popUp);
   if (popUp) {
@@ -92,3 +94,44 @@ function translate(s)
   str = str.replace(/ý|ỳ|ỷ|ỹ|ỵ/g, "y");
   return str;
 }
+
+
+function showComment()
+{
+  //nhieu comment
+  var comment = document.getElementById("comment1");
+  var comment2 = document.getElementById("comment2");
+  if (comment) {
+    comment.classList.remove("hidden");
+    comment2.classList.remove("hidden");
+  }
+  var send = document.getElementById("gui-nhan-xet");
+  var add = document.getElementById("them-nhan-xet");
+  if(send) {
+    send.classList.remove("hidden");
+  }
+  if(add) {
+    add.classList.add("hidden");
+  }
+}
+function hideComment() {
+  var comment = document.getElementById("comment1");
+  var comment2 = document.getElementById("comment2");
+  if (comment) {
+    comment.classList.add("hidden");
+    comment2.classList.add("hidden");
+  }
+  var send = document.getElementById("gui-nhan-xet");
+  var add = document.getElementById("them-nhan-xet");
+  if(send) {
+    send.classList.add("hidden");
+  }
+  if(add) {
+    add.classList.remove("hidden");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var fadeInElement = document.querySelector('.fade-in');
+  fadeInElement.classList.add('show');
+});
