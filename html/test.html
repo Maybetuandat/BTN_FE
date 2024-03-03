@@ -1,53 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thống kê kết quả kỳ thi</title>
-  <link rel="stylesheet" href="../css/static.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hệ Thống Thi Trắc Nghiệm PTIT</title>
+<link rel="stylesheet" href="../css/stylesloginandregister.css">  
+<script src = "../script/loginuser.js"> </script>
 </head>
 <body>
-  <h1>Bảng thống kê tổng hợp kết quả của sinh viên</h1>
-  <div id="filters">
-    <label for="examFilter">Lọc theo kỳ thi:</label>
-    <select id="examFilter">
-      <option value="all">Tất cả</option>
-      <option value="toan">Toán</option>
-      <option value="van">Văn</option>
-      <option value="ly">Lý</option>
-      <!-- Thêm các lựa chọn khác nếu cần -->
-    </select>
-  </div>
 
-  <table id="resultsTable">
-    <thead>
-      <tr>
-        <th>STT</th>
-        <th>Tên</th>
-        <th>Kỳ thi</th>
-        <th>Điểm</th>
-      </tr>
-    </thead>
-    <tbody id="resultsBody">
-      <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
-    </tbody>
-  </table>
-
-  <div id="statistics">
-    <h2>Thống kê</h2>
-    <p>Tổng số lần tham gia: <span id="totalStudents"></span></p>
-    <p>Tỷ lệ hoàn thành: <span id="completionRate"></span></p>
-    <p>Điểm trung bình: <span id="averageScore"></span></p>
-    <canvas id="scoreChart" width="400" height="200"></canvas>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../script/script.js"></script>
-  <button onclick="exportToPDF()">Xuất báo cáo PDF</button>
-<button onclick="exportToExcel()">Xuất báo cáo Excel</button>
-
+    <div class="container">
+        <!--div cua khoi ten hoc vien  -->
+         <div class = "content">
+     
+              <img src="../img/logo.png" alt="" height="100px">
+              <div class = "name">
+                 <h1 >HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</h1>
+                 <h2 >Posts and Telecommunications Institude of Technology</h2>
+              </div>
+    </div>
+         <input type="text" id="loginUsername" placeholder="Tên đăng nhập">
+         <input type="password" id="loginPassword" placeholder="Mật khẩu">
+         <input type="button" value="Đăng nhập" onclick="login()">
 </body>
 </html>

@@ -95,6 +95,8 @@ var studentResults = [
   
   // Gọi hàm để hiển thị dữ liệu khi trang được tải
   displayResults();
+
+  
   function exportToPDF() {
     const doc = new jsPDF();
     doc.autoTable({ html: '#resultsTable' });
