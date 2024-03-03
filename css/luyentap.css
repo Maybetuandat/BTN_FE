@@ -1,0 +1,227 @@
+* {
+    font-size: 16px;
+}
+
+.mon1 {
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn-vaothi {
+    margin-left: auto;
+    background-color: #ad171c;
+    color: white;
+    padding: 5px;
+    border: none;
+    /* border-radius: 0.5rem; */
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 20px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
+}
+@media (max-width: 800px) {
+    #container {
+        width: 100%; 
+    }
+    
+  }
+
+#luachon {
+    width: 100%;
+    display: flex;
+}
+.btn-tt {
+    width: 50%;
+    background-color: #f0f0f0;
+    /* border: none; */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 3rem;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #dedbdc;
+    border-top: none;
+    border-bottom: none;
+}
+
+#container-luyentap, #container-thi {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-right: auto;
+    background-color: white;
+    height: 500px;
+    overflow-y: auto;
+    border: 2px solid #dedbdc;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* #container-thi {
+    display: none;
+    width: 50%;
+    margin-right: auto;
+} */
+
+.container-monthi {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    /* height: 20px; */
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px;
+    margin-bottom: auto;
+    font-weight: 100;
+    /* margin-left: 20px; */
+}
+
+.kythi,.luyentap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: 600;
+    border: 2px solid #dedbdc;
+    border-top: none;
+    border-bottom: none;
+}
+
+.btn-xem {
+    margin-left: auto;
+    width: 20%;
+    border: 1px solid #d4d4d4;
+    cursor: pointer;
+}
+
+p {
+    margin-right: auto;
+    width: 50%;
+}
+
+#myInput {
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYFitaxaef3Jny9Bt3VLcqD2Q3dfaxwGzV6ZowVje-iEatF9TZhxnxXeHiep3hlFaoMy_4ym_eosCZN3CifeNzK9Ys6-6wpIA53twYGvgsmA-o7fE5bKSEJNa38skej0p-DSKxTmQH53_0/s16000/search_icon.png'); 
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 100%; 
+    font-size: 16px; 
+    padding: 7px 10px 7px 40px; 
+    /* border: none; */
+    border: 2px solid #dedbdc;
+    border-top: none;
+    border-bottom: none;
+    margin-bottom: 10px;  
+    /* border-radius: 5px; */
+}
+
+
+/* Header Styles */
+.header {
+
+    position: fixed;
+    width: 100%;
+    background-color: #ad171c;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    justify-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    /* justify-items: center; */
+
+}
+
+.img-logo {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+
+    margin-left: 15px;
+    /* Đặt khoảng cách bao quanh hình ảnh */
+}
+
+
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    display: block;
+
+
+
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    font-size: 20px;
+    right: 200px;
+}
+
+.nav-element {
+    margin: 15px 20px;
+}
+
+.avt-logo {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    justify-items: center;
+    margin-top: 6px;
+}
+
+.img-avt {
+    background-color: #fff;
+    border-radius: 50%;
+    /* padding: 5px; */
+
+    margin-left: 10px;
+    /* Đặt khoảng cách bao quanh hình ảnh */
+}
+
+.avt-logo img {
+    width: 40px;
+    height: 40px;
+    display: block;
+
+
+
+}
+
+.header-title {
+    /* display: flex; */
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: 550;
+    /* text-align: center; */
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+.header-title a {
+    display: flex;
+    align-items: center;
+
+}
