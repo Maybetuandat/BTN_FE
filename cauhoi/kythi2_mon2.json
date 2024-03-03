@@ -1,0 +1,26 @@
+[
+    {
+      "question": "Cậu tên là??",
+      "choice1": "Vũ",
+      "choice2": "Đạt",
+      "choice3": "Quân",
+      "choice4": "Hiệp",
+      "answer": 2
+    },
+    {
+      "question": "Sở thích của cậu?",
+      "choice1": "Nhảy hiphop",
+      "choice2": "Đá bóng",
+      "choice3": "Học bài",
+      "choice4": "Ngủ",
+      "answer": 4
+    },
+    {
+      "question": "Bạn thích ai nhất?",
+      "choice1": "Khúc Thị Hương",
+      "choice2": "Khúc",
+      "choice3": "Thị",
+      "choice4": "Hương",
+      "answer": 1
+    }
+  ]

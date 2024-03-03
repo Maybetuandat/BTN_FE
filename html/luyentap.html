@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/luyentap.css" />
+    <link rel="stylesheet" href="../css/game.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="nav-logo">
+
+            <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+
+        </div>
+        <div class="header-title">
+            PTIT TEST
+        </div>
+
+    
+
+        <div class="avt-logo">
+
+            <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+
+        </div>
+    </div>
+
+    
+    <div id="container">
+        <h1>Xin chào,</h1>
+        <h2>Tổng hợp các đề trắc nghiệm</h2>
+        <div id="luachon">
+            <button id="btn-lt" class="btn-tt" onclick="showLuyentap()">Luyện tập</button>
+            <button id="btn-thi" class="btn-tt" onclick="showThi()">Thi thử</button>
+        </div>
+        <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search..." autocomplete="off">
+        <div id="container-luyentap">
+            <div id="luyentap1" class="luyentap">
+                <p id="lt1">Luyện thi giữa kỳ I năm 1</p>
+                <button class="btn-xem" onclick="hideShow('luyentap1')">Danh sách môn</button>
+            </div>
+            <div id="luyentap2" class="luyentap">
+                <p id="lt2">Ngân hàng đề kỳ II năm 3</p>
+                <button class="btn-xem" onclick="hideShow('luyentap2')">Danh sách môn</button>
+            </div>
+            <div id="luyentap3" class="luyentap">
+                <p id="lt3">Ngân hàng đề kỳ I năm 2</p>
+                <button class="btn-xem" onclick="hideShow('luyentap3')">Danh sách môn</button>
+            </div>
+            <div id="luyentap4" class="luyentap">
+                <p id="lt4">Bộ đề thi tổng hợp</p>
+                <button class="btn-xem" onclick="hideShow('luyentap4')">Danh sách môn</button>
+            </div>
+            <div id="luyentap5" class="luyentap">
+                <p id="lt5">Luyện thi cuối kỳ II năm 2</p>
+                <button class="btn-xem" onclick="hideShow('luyentap5')">Danh sách môn</button>
+            </div>
+            <div id="luyentap6" class="luyentap">
+                <p id="lt6">Luyện tập 6</p>
+                <button class="btn-xem" onclick="hideShow('luyentap6')">Danh sách môn</button>
+            </div>
+            <div id="luyentap7" class="luyentap">
+                <p id="lt7">Luyện tập 7</p>
+                <button class="btn-xem" onclick="hideShow('luyentap7')">Danh sách môn</button>
+            </div>
+        </div>
+        <div id="container-thi">
+            <div id="kythi1" class="kythi">
+                <p id="thi1">Thi thử đề thi cuối kỳ I năm 1 khóa D17</p>
+                <button class="btn-xem" onclick="hideShow('kythi1')">Danh sách môn</button>
+            </div>
+            <div id="kythi2" class="kythi">
+                <p id="thi2">Học kỳ II năm 3</p>
+                <button class="btn-xem" onclick="hideShow('kythi2')">Danh sách môn</button>
+            </div>
+            <div id="kythi3" class="kythi">
+                <p id="thi3">Thi thử đề thi giữa kỳ II năm 1 khóa D19</p>
+                <button class="btn-xem" onclick="hideShow('kythi3')">Danh sách môn</button>
+            </div>
+            <div id="kythi4" class="kythi">
+                <p id="thi4">Thi 4</p>
+                <button class="btn-xem" onclick="hideShow('kythi4')">Danh sách môn</button>
+            </div>
+            <div id="kythi5" class="kythi">
+                <p id="thi5">Thi 5</p>
+                <button class="btn-xem" onclick="hideShow('kythi5')">Danh sách môn</button>
+            </div>
+            <div id="kythi6" class="kythi">
+                <p id="thi6">Thi 6</p>
+                <button class="btn-xem" onclick="hideShow('kythi6')">Danh sách môn</button>
+            </div>
+            <div id="kythi7" class="kythi">
+                <p id="thi7">Thi 7</p>
+                <button class="btn-xem" onclick="hideShow('kythi7')">Danh sách môn</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="../javascript/luyentap.js"></script>
+</body>
+</html>
