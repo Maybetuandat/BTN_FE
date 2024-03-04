@@ -27,10 +27,10 @@ function register() {
         });
         if (!exists) {
             users.push({ username: newUsername, password: newPassword });
-            window.location.href = "../html/index.html";  
+            window.location.href = "../index.html";  
         } else 
         {
-            window.location.href = "../html/register.html";
+            window.location.href = "../index.html";
             
         }
     } else {
@@ -63,7 +63,7 @@ function forgotpassword()
 {
     document.getElementById("email").value = "";  
     alert("We've just sent to your email! Let check it!")
-    window.location.href = "../html/index.html";   // điều hướng qua trang khác
+    window.location.href = "../index.html";   // điều hướng qua trang khác
 }
 //    kiểm tra xem mật khẩu đã đủ các kí tự in thường, in hoa , kí tự đặc biệt hay chưa
 function isValidPassword(password)   // trả về true or false
