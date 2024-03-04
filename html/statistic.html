@@ -38,19 +38,90 @@
     </div>
     <!-- thanh tìm kiếm -->
     <div id="content" class="main-container fade-in">
-        <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search..." autocomplete="on">
+        <div class="search-bar">
+            <!-- thanh so xuong co 2 lua chon la tim theo ten hay ma sinh vien -->
+            <select name="search" id="search">
+                <option value="name">Tìm theo tên</option>
+                <option value="kythi">Tìm theo kỳ thi</option>
+                <option value="mon">Tìm theo môn</option>
+            </select>
+            <input type="text" id="myInput1" placeholder="Nhập thông tin muốn tìm kiếm">
+            <button onclick="Search()">Tìm kiếm</button>
+            <button onclick="showAll()">Hiển thị tất cả</button>
+        </div>
 
         <!-- bảng hiển thị thống kê -->
-        <table class="display" id="table" style="width: 100%;">
-            <thead id="tableHead"> </thead>
-            <tbody id="tableBody"> </tbody>
-
-        </table>
-        <h1>Thống kê chi tiết</h1>
-        <canvas id="myChart" width="800" height="400"></canvas>
-        <div> <button class="downloadpdf" onclick="exportToPDF()">Convert to pdf</button>
-            <button onclick="exportToExcel()">Convert to excel</button>
+        <div class="ngan-cach">
+            <hr>
+            <hr>
         </div>
+        <div class="detail-list">
+            <table border="1" id="table">
+                <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th>Kỳ thi</th>
+                    <th>Môn</th>
+                    <th>Điểm</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Kỳ thi 1</td>
+                    <td>Toán</td>
+                    <td>9.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nguyễn Văn B</td>
+                    <td>Kỳ thi 1</td>
+                    <td>Toán</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Nguyễn Văn C</td>
+                    <td>Kỳ thi 1</td>
+                    <td>Toán</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Nguyễn Văn D</td>
+                    <td>Kỳ thi 1</td>
+                    <td>Toán</td>
+                    <td>6.5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Nguyễn Văn E</td>
+                    <td>Kỳ thi 1</td>
+                    <td>Toán</td>
+                    <td>5.5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Nguyễn Văn F</td>
+                    <td>Kỳ thi 1</td>
+                    <td>Toán</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Nguyễn Văn G</td>
+                    <td>Kỳ thi 1</td>
+                    <td>Toán</td>
+                    <td>3.5</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <h1>Thống kê chi tiết</h1>
+    <canvas id="myChart" width="800" height="400"></canvas>
+    <div> <button class="downloadpdf" onclick="exportToPDF()">Convert to pdf</button>
+        <button onclick="exportToExcel()">Convert to excel</button>
+    </div>
 
     </div>
     <script src="../script/static.js"> </script>

@@ -114,3 +114,57 @@ function exportToExcel()
   const wb = XLSX.utils.table_to_book(document.getElementById('table'), {sheet: "Sheet1"});
   XLSX.writeFile(wb, "table.xlsx");
 }
+
+function showAll()
+{
+  var input = document.getElementById("myInput1");
+  input.value = "";
+  Search();
+}
+
+function Search() {
+
+  var input, filter, table, tr, td, i, txtValue, select;
+  input = document.getElementById("myInput1");
+  filter = translate(input.value.toUpperCase());
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+  select = document.getElementById("search");
+  let index = 1;
+  if(select.value =="kythi"){
+    index = 2;
+  }
+  else if(select.value =="mon"){
+    index = 3;
+  }
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[index];
+    if (td) {
+      txtValue = translate(td.textContent || td.innerText);
+      let txt = txtValue.toLowerCase().split(" ").join("");
+      console.log(txt);
+      if (txt.indexOf(filter) !== -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+      
+    }
+  }
+}
+
+function translate(s)
+{
+  //translate tu tieng viet sang kh dau
+  var str = s;
+  str = str.toLowerCase();
+  str = str.replace(/á|à|ả|ã|ạ|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/g, "a");
+  str = str.replace(/đ/g, "d");
+  str = str.replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/g, "e");
+  str = str.replace(/í|ì|ỉ|ĩ|ị/g, "i");
+  str = str.replace(/ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ/g, "o");
+  str = str.replace(/ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự/g, "u");
+  str = str.replace(/ý|ỳ|ỷ|ỹ|ỵ/g, "y");
+  return str;
+}
+

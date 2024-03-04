@@ -4,6 +4,90 @@
   overflow: hidden;
   overflow-y: scroll;
 }
+.main-container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ngan-cach {
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+.detail-list th{
+  /* background-color:  */
+  background-color: #f2f2f2;
+  color: rgb(42, 42, 42);
+} 
+.search-bar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-left: 0%;
+}
+button {
+  padding: 8px 16px;
+  background-color: #ad171c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-right: 0px;
+  clear: both;
+}
+
+.search-bar button {
+  width: fit-content;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+#search {
+  border: black 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  width: 200px;
+  height: 30px;
+}
+
+.ngan-cach {
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
 #myInput {
   width: 100%; 
   font-size: 16px; 
@@ -147,20 +231,6 @@ body {
 
 }
 
-
-/* Test List Styles */
-.main-container {
-
-  max-width: 100%;
-  margin: 0px auto;
-  padding: 100px;
-
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-
-}
 
 
 
