@@ -21,37 +21,12 @@ function myFilter() {
 
 function addTable()
 {
-  var headerData = ["Stt", "Tên", "Kỳ Thi", "Môn Học", "Mã Môn", "Điểm"];
+  var headerData = ["Stt", "Tên", "Kỳ Thi", "Tham Gia", "Hoàn Thành", "Điểm Trung Bình"];
   var data = [
-    ["1", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["2", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["3", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["4", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["5", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["6", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["7", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["8", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["9", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["10", "Nguyễn Anh Quân", "Giữa kì", "Giải tích", "INT1015", "4"],
-    ["12", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["13", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["14", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["15", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["16", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["17", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["18", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["19", "Nguyễn Anh Quân", "Cuối kì", "Giải tích", "INT1015", "4"],
-    ["20", "Nguyễn Hoàng Hiệp", "Cuối kì", "Giải tích", "INT1015", "3"],
-    ["21", "Nguyễn Hoàng Hiệp", "Cuối kì", "Giải tích", "INT1015", "3"],
-    ["22", "Nguyễn Hoàng Hiệp", "Cuối kì", "Giải tích", "INT1015", "3"],
-    ["23", "Nguyễn Hoàng Hiệp", "Cuối kì", "Giải tích", "INT1015", "3"],
-    ["24", "Nguyễn Hoàng Hiệp", "Cuối kì", "Giải tích", "INT1015", "3"],
-    ["25", "Nguyễn Hoàng Hiệp", "Cuối kì", "Đại số", "INT1015", "3"],
-    ["26", "Nguyễn Hoàng Hiệp", "Cuối kì", "Đại số", "INT1015", "3"],
-    ["27", "Nguyễn Hoàng Hiệp", "Cuối kì", "Đại số", "INT1015", "3"],
-    ["28", "Nguyễn Hoàng Hiệp", "Cuối kì", "Đại số", "INT1015", "3"],
-    ["29", "Nguyễn Hoàng Hiệp", "Cuối kì", "Đại số", "INT1015", "3"],
-    ["30", "Nguyễn Hoàng Hiệp", "Cuối kì", "Đại số", "INT1015", "3"],
+    ["1", "Nguyễn Anh Quân", "Giữa kì", "3", "80", "9"],
+    ["2", "Nguyễn Hoàng Hiệp", "Giữa kì", "4", "100", "2"],
+    ["2", "Trịnh Vinh Tuấn Đạt", "Giữa kì", "4", "100", "1"],
+    ["2", "Hoàng Anh Vũ", "Giữa kì", "4", "100", "8"],
   ];
 
   var tableHead = document.getElementById("tableHead");
