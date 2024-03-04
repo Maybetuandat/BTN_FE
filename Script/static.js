@@ -62,7 +62,7 @@ addTable();
 function buildchart()
 {
   var data = {
-    labels: ['0-20', '21-40', '41-60', '61-80', '81-100'],
+    labels: ['0-2', '2-4', '4-6', '6-8', '8-10'],
     datasets: [{
         label: 'Phân phối điểm số',
         data: [15, 25, 30, 20, 10], // Số lượng sinh viên trong từng khoảng điểm
