@@ -21,12 +21,12 @@ function myFilter() {
 
 function addTable()
 {
-  var headerData = ["Stt", "Tên", "Kỳ Thi", "Tham Gia", "Hoàn Thành", "Điểm Trung Bình"];
+  var headerData = ["Stt", "Tên", "Kỳ Thi", "Môn", "Mã Môn", "Điểm"];
   var data = [
-    ["1", "Nguyễn Anh Quân", "Giữa kì", "3", "80", "9"],
-    ["2", "Nguyễn Hoàng Hiệp", "Giữa kì", "4", "100", "2"],
-    ["2", "Trịnh Vinh Tuấn Đạt", "Giữa kì", "4", "100", "1"],
-    ["2", "Hoàng Anh Vũ", "Giữa kì", "4", "100", "8"],
+    ["1", "Nguyễn Anh Quân", "Giữa kì", "Đại số", "INT1001", "9"],
+    ["2", "Nguyễn Hoàng Hiệp", "Giữa kì", "Đại số", "INT1015", "2"],
+    ["2", "Trịnh Vinh Tuấn Đạt", "Giữa kì", "Đại số", "INT1015", "1"],
+    ["2", "Hoàng Anh Vũ", "Giữa kì", "Giải tích", "INT1015", "4"],
   ];
 
   var tableHead = document.getElementById("tableHead");
