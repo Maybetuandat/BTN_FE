@@ -23,7 +23,9 @@
     padding: 10px;
     justify-content: center;
 }
-
+.btn-vaothi:hover {
+    background-color: #418bd5;box-shadow: 3px 3px 3px rgba(147, 144, 144, 0.532);
+}
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +65,6 @@
     
     box-shadow: 10px 10px 10px grey;
 }
-
 #container-luyentap, #container-thi {
     display: flex;
     position: relative;
@@ -161,12 +162,15 @@
     background-color: #ad171c;
     box-shadow: 3px 3px 3px grey;
 }
-
+.btn-xem:hover {
+    background-color: #418bd5a1;
+    box-shadow: 3px 3px 3px rgba(147, 144, 144, 0.532);
+    border: 1px solid #f6f3f400;
+}
 p {
     margin-right: auto;
     width: 50%;
 }
-
 #myInput {
     background-position: auto;
     background-image:none;
@@ -246,6 +250,98 @@ p {
     margin-top: 6px;
 }
 
+.notice{
+    position: relative;
+    margin-right: 10px;
+    
+}
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu làm mờ */
+    z-index: 999; /* Ban đầu ẩn */
+    
+    display: none;  
+}
+.dialog-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+.footer-dialog {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    bottom: 30 !important;
+}
+.dialog-content{
+    justify-content: center;
+    text-align: center !important;
+    justify-content: center !important;
+    font-size: 30px !important;
+}
+#question-dialog{
+    font-size: 20px;
+    font-weight: 300px;
+    margin-top: 20px;
+}
+.dialog-content h2{
+    font-size: 23px !important;
+}
+.dialog-content p{
+    justify-content: center;
+    text-align: center !important;
+    font-size: 20px;
+    width: 100% !important;
+}
+#btn-close{
+    background-color: #ad171c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 120px;
+    height: 50px;
+
+}
+#btn-close:hover{
+    background-color: #418bd5;
+}
+#btn-continue{
+    width: 120px;
+    background-color: #ad171c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    height: 50px;
+}
+#btn-continue:hover{
+    background-color: #418bd5;
+}
+.notice img{
+    margin-top: 15% !important;
+    width: 30px !important;
+    height:30px !important;
+}
 .img-avt {
     background-color: #fff;
     border-radius: 50%;
@@ -259,6 +355,7 @@ p {
     width: 40px;
     height: 40px;
     display: block;
+    border-radius: 50%;
 
 }
 .avt{

@@ -17,6 +17,8 @@ function login() {
     if (found) {
         window.location.href = "../html/admin-dashboard.html"; // điều hướng ra trang admin
     } else {
+        var notice = document.getElementById("notice");
+        notice.classList.remove("hidden")
         document.getElementById("loginUsername").value = "";  // xóa kí tự tài khoản vừa nhập
         document.getElementById("loginPassword").value = ""; 
     }

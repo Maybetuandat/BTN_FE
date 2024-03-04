@@ -12,6 +12,17 @@
 
 <body>
 
+  <div class="dialog-overlay" id="dialogOverlay"></div>
+
+  <!-- Nội dung của dialog -->
+  <div class="dialog-content" id="dialogContent">
+    <h2 class="sent" id="content-dialog">Cảm ơn bạn đã tham gia khảo sát</h2>
+    <p class="sent" id="question-dialog">Câu trả lời của bạn đã được gửi đi.</p>
+    <div class="footer-dialog">
+      <button id="btn-close" onclick="closeDialog()">Đóng</button>
+      <button id="btn-continue">Tiếp tục</button>
+    </div>
+  </div>
   <div class="container">
     <div id="container-subject">
       <div id="subject"></div>

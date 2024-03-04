@@ -126,11 +126,15 @@ scoring = () => {
 }
 
 goGame = () => {
-    window.location.assign('../html/game.html');
+    openDialog('Bạn có muốn làm lại từ đầu?', 'Nếu bạn chọn "Tiếp tục", toàn bộ kết quả sẽ bị mất.', function() {
+        window.location.assign('../html/game.html');
+    });
 }
 
 goHome = () => {
+    openDialog('Bạn có muốn thoát?', 'Nếu bạn chọn "Tiếp tục", toàn bộ kết quả sẽ bị mất.', function() {
     window.location.assign('../html/luyentap.html');
+    });
 }
 
 document.addEventListener('scroll', function() {
@@ -146,3 +150,26 @@ document.addEventListener('scroll', function() {
         rightDiv.style.top = (scrollTop) + 'px';
     }
 });
+function openDialog(tittle, content, func) {
+    localStorage.setItem('setTime', 0);
+    var dialogOverlay = document.getElementById('dialogOverlay');
+    var dialogContent = document.getElementById('dialogContent');
+    var content1 = document.getElementById('content-dialog');
+    var question = document.getElementById('question-dialog');
+    var btnContinue = document.getElementById('btn-continue');
+    question.innerHTML = `<p class="sent" id="question-dialog">${content}</p>`;
+    content1.textContent = tittle;
+    btnContinue.onclick = func;
+    dialogOverlay.style.display = 'block';
+    dialogContent.style.display = 'block';
+    console.log('click');
+}
+
+// Hàm đóng dialog
+function closeDialog() {
+    localStorage.setItem('setTime', 1);
+    var dialogOverlay = document.getElementById('dialogOverlay');
+    var dialogContent = document.getElementById('dialogContent');
+    dialogOverlay.style.display = 'none';
+    dialogContent.style.display = 'none';
+}
