@@ -109,3 +109,19 @@ h2{
     flex-direction: column;
     flex-wrap: wrap;
 }
+#loginUsername{
+    height: 50px !important;
+}
+#loginPassword{
+    height: 50px !important;
+}
+.hidden{
+    display: none;
+}
+.btn-dangnhap{
+    height: 50px;
+    font-size: 16px;
+}
+.checkbox:hover{
+    cursor: pointer;
+}

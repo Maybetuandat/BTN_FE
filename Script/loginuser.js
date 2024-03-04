@@ -51,10 +51,10 @@ function login() {
         return user.username === username && user.password === password;
     });
     if (found) {
-        alert("Tên đăng nhập hoặc mật khẩu  đúng!");
         window.location.href = "../html/luyentap.html"; // điều hướng ra trang admin
     } else {
-        alert("Tên đăng nhập hoặc mật khẩu không đúng!"); 
+        var notice = document.getElementById("notice");
+        notice.classList.remove("hidden")
         document.getElementById("loginUsername").value = "";  // xóa kí tự tài khoản vừa nhập
         document.getElementById("loginPassword").value = ""; 
     }

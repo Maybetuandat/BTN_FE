@@ -1,12 +1,13 @@
-let somonthi = [0,3,5,4,1,1,5,3];
+let somonthi = [0,5,5,5,1,1,5,3];
 for(let i=1; i<=7; i++) {
         let kythi = 'kythi' + i;
         let container_kythi = document.getElementById(kythi);
         for(let j=1; j<=somonthi[i]; j++) {
+            if(j <= 3){
                 let container_monthi = document.createElement('div');
                 container_monthi.classList.add('container-monthi');
                 container_monthi.classList.add(kythi);
-        
+                
                 let newDiv = document.createElement('div');
                 let mon = 'kythi' + i + '_' + 'mon' + j;
 
@@ -26,6 +27,32 @@ for(let i=1; i<=7; i++) {
                 container_monthi.appendChild(newDiv);
                 container_monthi.appendChild(newButton);
                 container_kythi.appendChild(container_monthi);
+            }
+            else{
+                let container_monthi = document.createElement('div');
+                container_monthi.classList.add('container-monchuathi');
+                container_monthi.classList.add(kythi);
+                
+                let newDiv = document.createElement('div');
+                let mon = 'kythi' + i + '_' + 'mon' + j;
+
+                newDiv.textContent = "Môn " + j;
+                newDiv.classList.add('mon1');
+                let nameExam = document.getElementById('thi'+i).textContent + ' - ' + newDiv.textContent;
+
+                let newButton = document.createElement('button');
+                newButton.textContent = 'Chưa bắt đầu';
+                newButton.classList.add('btn-chua-bat-dau');
+                newButton.onclick = () => {
+                        localStorage.setItem('currentSubject', mon);
+                        localStorage.setItem('nameExam', nameExam);
+                        window.location.assign('../html/game.html');
+                }
+
+                container_monthi.appendChild(newDiv);
+                container_monthi.appendChild(newButton);
+                container_kythi.appendChild(container_monthi);
+            }
         }    
 }
 
@@ -35,6 +62,8 @@ for(let i=1; i<=7; i++) {
         let luyentap = 'luyentap' + i;
         let container_luyentap = document.getElementById(luyentap);
         for(let j=1; j<=somonluyentap[i]; j++) {
+            if(j <= 3)
+            {
                 let container_monluyentap = document.createElement('div');
                 container_monluyentap.classList.add('container-monthi');
                 container_monluyentap.classList.add(luyentap);
@@ -58,6 +87,31 @@ for(let i=1; i<=7; i++) {
                 container_monluyentap.appendChild(newDiv);
                 container_monluyentap.appendChild(newButton);
                 container_luyentap.appendChild(container_monluyentap);
+            }
+            else{
+                let container_monluyentap = document.createElement('div');
+                container_monluyentap.classList.add('container-monchuathi');
+                container_monluyentap.classList.add(luyentap);
+        
+                let newDiv = document.createElement('div');
+                let mon = 'luyentap' + i + '_' + 'mon' + j;
+                // let monVn = 'Luyện tập ' + i + document.getElementById('mon'+j).textContent;
+                newDiv.textContent = tenmon[i][j-1];
+                newDiv.classList.add('mon1');
+                let nameExam = document.getElementById('lt'+i).textContent + ' - ' + newDiv.textContent;
+        
+                let newButton = document.createElement('button');
+                newButton.textContent = 'Chưa bắt đầu';
+                newButton.classList.add('btn-chua-bat-dau');
+                newButton.onclick = () => {
+                    
+                }
+                
+                container_monluyentap.appendChild(newDiv);
+                container_monluyentap.appendChild(newButton);
+                container_luyentap.appendChild(container_monluyentap);
+            
+            }
         }
         
 }
@@ -65,15 +119,13 @@ for(let i=1; i<=7; i++) {
 
 hideShow = (x) => {
         let container_monthi = document.getElementsByClassName(x);
-        // container_monthi.style.display = 'none';
         for (var i = 0; i < container_monthi.length; i++) {
-                if (container_monthi[i].style.display === 'none') {
-                    container_monthi[i].style.display = 'flex'; // hoặc 'inline' tùy vào kiểu block hoặc inline của phần tử
-                } else {
+            if (container_monthi[i].style.display === 'none') {
+                    container_monthi[i].style.display = 'flex';
+            } else {
                     container_monthi[i].style.display = 'none';
-                }
             }
-        
+        }
 }
 
 
