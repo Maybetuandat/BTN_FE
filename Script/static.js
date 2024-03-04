@@ -59,3 +59,58 @@ data.forEach(function(rowData) {
 }
 addTable();
 // Lấy tham chiếu đến thead và tbody
+function buildchart()
+{
+  var data = {
+    labels: ['0-20', '21-40', '41-60', '61-80', '81-100'],
+    datasets: [{
+        label: 'Phân phối điểm số',
+        data: [15, 25, 30, 20, 10], // Số lượng sinh viên trong từng khoảng điểm
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(153, 102, 255, 0.5)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Tùy chọn biểu đồ
+var options = {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+};
+
+// Lấy canvas và vẽ biểu đồ
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: options
+});
+}
+buildchart();
+function exportToPDF()
+{
+  const content = document.getElementById('content');
+  html2pdf().from(content).save("Statics");
+}
+function exportToExcel()
+{
+  const wb = XLSX.utils.table_to_book(document.getElementById('table'), {sheet: "Sheet1"});
+  XLSX.writeFile(wb, "table.xlsx");
+}
