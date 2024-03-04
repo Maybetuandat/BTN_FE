@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biểu đồ thống kê</title>
+    <title>Biểu đồ Thống kê</title>
+    <!-- Nhúng thư viện Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <canvas id="myChart" width="800" height="400"></canvas>
 
     <script>
+        // Dữ liệu mẫu
+        var data = {
+            labels: ['0-20', '21-40', '41-60', '61-80', '81-100'],
+            datasets: [{
+                label: 'Phân phối điểm số',
+                data: [15, 25, 30, 20, 10], // Số lượng sinh viên trong từng khoảng điểm
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Tùy chọn biểu đồ
+        var options = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        };
+
+        // Lấy canvas và vẽ biểu đồ
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'bar', // Loại biểu đồ: bar, line, pie, etc.
-            data: {
-                labels: ['Tổng số lần tham gia', 'Tỷ lệ hoàn thành', 'Điểm trung bình', 'Phân phối điểm số'],
-                datasets: [{
-                    label: 'Dữ liệu thống kê',
-                    data: [100, 75, 85, 90], // Dữ liệu thực tế của bạn
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
+            type: 'bar',
+            data: data,
+            options: options
         });
     </script>
 </body>
