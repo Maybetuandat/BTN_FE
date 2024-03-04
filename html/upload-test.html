@@ -28,6 +28,10 @@
             <div class="nav-element"><a href="#">Tin tức</a></div>
         </div>
 
+        <div class="menu-button">
+            <i class="ti-menu"></i>
+        </div>
+
         <div class="avt-logo">
             <a href="#">
                 <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
@@ -36,7 +40,7 @@
     </div>
 
     <div class="container">
-        <div class="option-container">
+        <div class="option-container" id="option-container">
             <h1>Tạo mới bài thi</h1>
             <div class="test-description">
                 <form id="description-form">
@@ -81,7 +85,7 @@
                         <input type="file" id="excel-file" name="excelFile" accept=".xls,.xlsx">
                     </div>
 
-                    <button type="submit">Tạo bài thi</button>
+                    <button type="submit" onclick="render()">Tạo bài thi</button>
                     <button onclick="Save()">
                         <i class="ti-save"></i>
                     </button>
@@ -89,7 +93,7 @@
             </div>
         </div>
 
-        <div class="detail-container">
+        <div class="detail-container" id="detail-container">
             <div id="questionsContainer">
 
                 <div class="empty-text">
