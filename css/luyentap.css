@@ -12,17 +12,25 @@
     margin-left: auto;
     background-color: #ad171c;
     color: white;
-    padding: 5px;
     border: none;
     /* border-radius: 0.5rem; */
     font-size: 15px;
     cursor: pointer;
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 5px;
+    height: 40px;
+    width: fit-content;
+    padding: 10px;
+    transition: 0.4s;
+    justify-content: center;
 }
-
+.btn-vaothi:hover {
+    background-color: #418bd5;box-shadow: 3px 3px 3px rgba(147, 144, 144, 0.532);
+}
 #container {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 80%;
     padding: 20px;
     padding-top: 100px;
     margin-left: auto;
@@ -43,30 +51,45 @@
 }
 .btn-tt {
     width: 50%;
-    background-color: #f0f0f0;
+    background-color: #cd3030;
     /* border: none; */
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    height: 3rem;
-    font-size: large;
+    font-size: 22px;
+    height: 60px;
     font-weight: 600;
     cursor: pointer;
-    border: 2px solid #dedbdc;
-    border-top: none;
-    border-bottom: none;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px ;
+    border-top: 2px solid #dedbdc;
+    border-right: 2px solid #dedbdc;
+    border-left: 2px solid #dedbdc;
+    border-bottom: 2px solid #dedbdc;
+    
+    box-shadow: 10px 10px 10px grey;
 }
-
+.btn-tt:focus {
+    /* outline: none; Loại bỏ đường viền mặc định */
+    box-shadow: 10px 0px 20px #844459;
+}
 #container-luyentap, #container-thi {
     display: flex;
     position: relative;
     width: 100%;
     margin-right: auto;
     background-color: white;
+
     height: 70vh;
+
+    min-height: 800px;
+
     overflow-y: auto;
     border: 2px solid #dedbdc;
     border-top: none;
-    border-bottom: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+    margin-bottom: 100px;;
+}
+#container-luyentap {
+    animation: slideRight 2s ease infinite;
 }
 
 /* #container-thi {
@@ -78,57 +101,114 @@
 .container-monthi {
     display: flex;
     width: 100%;
+    background-color: rgba(61, 250, 71, 0.34);
+    /* height: 20px; */
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px;
+    height: 60px;
+    border-radius: 5px;
+    font-weight: 100;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgb(163, 210, 210);
+    /* margin-left: 20px; */
+    transition: 0.2s;
+}
+.container-monthi:hover {
+    background-color: rgba(54, 227, 63, 0.34);
+}
+.detail-monthi {
+    display: flex;
+    width: 100%;
+    height: 100px;
     background-color: white;
     /* height: 20px; */
     border: 1px solid #ddd;
     position: relative;
     padding: 10px;
-    margin-bottom: auto;
+    margin-bottom: 100px;
     font-weight: 100;
     /* margin-left: 20px; */
 }
-
 .kythi,.luyentap {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 95%;
     padding: 10px;
-    background-color: #f0f0f0;
-    margin-top: 10px;
+    background-color: #b5fff081;
+    margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
     font-weight: 600;
     border: 2px solid #dedbdc;
     border-top: none;
     border-bottom: none;
+    border-radius: 10px;
+    min-height: 70px;
+    box-shadow: 3px 3px 3px grey;
+    /* transition: 0.4s; */
 }
-
+.kythi:hover, .luyentap:hover {
+    background-color: #95f4e181;
+}
+.luyentap p{
+    margin-right: auto;
+    width: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.kythi p{
+    margin-right: auto;
+    width: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .btn-xem {
     margin-left: auto;
-    width: 20%;
-    border: 1px solid #d4d4d4;
+    width: 15%;
+    height: 50px;
+    border: 1px solid #df8ea9;
     cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background-color: #ad171c;
+    box-shadow: 3px 3px 3px grey;
+    transition: 0.4s;
 }
-
+.btn-xem:hover {
+    background-color: #418bd5a1;
+    box-shadow: 3px 3px 3px rgba(147, 144, 144, 0.532);
+    border: 1px solid #f6f3f400;
+}
 p {
     margin-right: auto;
     width: 50%;
 }
-
 #myInput {
-    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYFitaxaef3Jny9Bt3VLcqD2Q3dfaxwGzV6ZowVje-iEatF9TZhxnxXeHiep3hlFaoMy_4ym_eosCZN3CifeNzK9Ys6-6wpIA53twYGvgsmA-o7fE5bKSEJNa38skej0p-DSKxTmQH53_0/s16000/search_icon.png'); 
-    background-position: 8px 8px;
+    background-position: auto;
+    background-image:none;
     background-repeat: no-repeat;
+    justify-items: center;
     background-color: white;
-    width: 100%; 
-    font-size: 16px; 
-    padding: 7px 10px 7px 40px; 
+    width: 100%;
+    font-size: 18px;
+    margin-top: 0px;
+    height: 60px;
+    padding: 7px 10px 7px 40px;
     /* border: none; */
     border: 2px solid #dedbdc;
-    border-top: none;
-    border-bottom: none;
-    margin-bottom: 10px;  
+    margin-bottom: 15px;  
     /* border-radius: 5px; */
+    
+    box-shadow: 10px 10px 10px grey;
 }
 
 
@@ -191,6 +271,100 @@ p {
     margin-top: 6px;
 }
 
+.notice{
+    position: relative;
+    margin-right: 10px;
+    
+}
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu làm mờ */
+    z-index: 999; /* Ban đầu ẩn */
+    
+    display: none;  
+}
+.dialog-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+.footer-dialog {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    bottom: 30 !important;
+}
+.dialog-content{
+    justify-content: center;
+    text-align: center !important;
+    justify-content: center !important;
+    font-size: 30px !important;
+}
+#question-dialog{
+    font-size: 20px;
+    font-weight: 300px;
+    margin-top: 20px;
+}
+.dialog-content h2{
+    font-size: 23px !important;
+}
+.dialog-content p{
+    justify-content: center;
+    text-align: center !important;
+    font-size: 20px;
+    width: 100% !important;
+}
+#btn-close{
+    background-color: #ad171c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    margin-right: 0px;
+    width: 120px;
+    height: 50px;
+    transition: 0.4s;
+  }
+  #btn-close:hover{
+    background-color: #418bd5;
+  }
+  #btn-continue{
+    width: 120px;
+    background-color: #ad171c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    margin: 10px;
+    transition: 0.4s;
+  }
+  #btn-continue:hover{
+    background-color: #418bd5;
+  }
+.notice img{
+    margin-top: 15% !important;
+    width: 30px !important;
+    height:30px !important;
+}
 .img-avt {
     background-color: #fff;
     border-radius: 50%;
@@ -204,11 +378,14 @@ p {
     width: 40px;
     height: 40px;
     display: block;
-
-
+    border-radius: 50%;
 
 }
-
+.avt{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 .header-title {
     /* display: flex; */
     font-size: 30px;
@@ -218,10 +395,46 @@ p {
     margin-top: auto;
     margin-bottom: auto;
     color: white;
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header-title a {
     display: flex;
     align-items: center;
 
+}
+.container-monchuathi{
+    display: flex;
+    width: 100%;
+    background-color: rgba(61, 61, 250, 0.34);
+    /* height: 20px; */
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px;
+    height: 60px;
+    border-radius: 5px;
+    font-weight: 100;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgb(163, 210, 210);
+    /* margin-left: 20px; */
+}
+.btn-chua-bat-dau{
+    margin-left: auto;
+    background-color: #4747479d;
+    color: white;
+    padding: 5px;
+    border: none;
+    /* border-radius: 0.5rem; */
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgb(91, 90, 90);
+    border-radius: 5px;
+    height: 40px;
+    width: fit-content;
+    justify-content: center;
 }

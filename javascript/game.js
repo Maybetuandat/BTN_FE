@@ -120,16 +120,16 @@ hiencauhoi = () => {
 }
 
 nopbai = () => {
-    let confirmed = confirm('Thời gian làm bài thi chưa hết, bạn có chắc chắn muốn nộp bài?');
-    if(!confirmed) return;
-    // console.log(ansUser);
-    localStorage.setItem('answerofUser', JSON.stringify(ansUser));
-    return window.location.assign('../html/end.html');
+    openDialog('Nộp bài', 'Thời gian làm bài thi chưa hết, bạn có chắc chắn muốn nộp bài?', function() {
+        localStorage.setItem('answerofUser', JSON.stringify(ansUser));
+        window.location.assign('../html/end.html');
+    });
 }
 thoat = () => {
-    let confirmed = confirm('Tiến trình sẽ không được lưu lại, bạn có muốn thoát khỏi bài thi?');
-    if(!confirmed) return;
-    return window.location.assign('../html/luyentap.html');
+
+    openDialog('Thoát', 'Tiến trình sẽ không được lưu lại, bạn có muốn thoát khỏi bài thi?', function() {
+        window.location.assign('../html/luyentap.html');
+    });
 }
 
 if(localStorage.getItem('setTime') == 1) {
@@ -150,9 +150,15 @@ if(localStorage.getItem('setTime') == 1) {
         if (distance < -1000) {
             clearInterval(timer);
             document.getElementById('countdown').innerHTML = 'Hết thời gian!';
-            alert('Hết thời gian làm bài thi!');
+            let btnClose = document.getElementById('btn-close');
+            btnClose.style.display = 'none';
+            openDialog('Hết giờ', "Xem kết quả", ()=> {
+                let btnClose = document.getElementById('btn-close');
+                btnClose.style.display = 'none';
+                return window.location.assign('../html/end.html');
+            });
             localStorage.setItem('answerofUser', JSON.stringify(ansUser));
-            return window.location.assign('../html/end.html');
+            // return window.location.assign('../html/end.html');
         }
     }, 1000);
 }
@@ -172,3 +178,26 @@ document.addEventListener('scroll', function() {
 });
 
 
+function openDialog(tittle, content, func) {
+    // localStorage.setItem('setTime', 0);
+    var dialogOverlay = document.getElementById('dialogOverlay');
+    var dialogContent = document.getElementById('dialogContent');
+    var content1 = document.getElementById('content-dialog');
+    var question = document.getElementById('question-dialog');
+    var btnContinue = document.getElementById('btn-continue');
+    question.innerHTML = `<p class="sent" id="question-dialog">${content}</p>`;
+    content1.textContent = tittle;
+    btnContinue.onclick = func;
+    dialogOverlay.style.display = 'block';
+    dialogContent.style.display = 'block';
+    console.log('click');
+}
+
+// Hàm đóng dialog
+function closeDialog() {
+    // localStorage.setItem('setTime', 1);
+    var dialogOverlay = document.getElementById('dialogOverlay');
+    var dialogContent = document.getElementById('dialogContent');
+    dialogOverlay.style.display = 'none';
+    dialogContent.style.display = 'none';
+}

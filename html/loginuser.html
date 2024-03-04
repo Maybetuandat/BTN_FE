@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hệ Thống Thi Trắc Nghiệm PTIT</title>
+   <link rel="stylesheet" href="../css/stylesloginandregister.css">
+   <script src="../Script/loginuser.js"> </script>
+</head>
+
+<body>
+
+   <div class="container">
+      <!--div cua khoi ten hoc vien  -->
+      <div class="content">
+         <img src="../img/logo.png" alt="" height="100px">
+         <div class="name">
+            <h1>HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</h1>
+            <h2>Posts and Telecommunications Institude of Technology</h2>
+         </div>
+      </div>
+      <input type="text" id="loginUsername" placeholder="Tên đăng nhập">
+      <input type="password" id="loginPassword" placeholder="Mật khẩu">
+      <p id="notice" class="hidden" style="color: red;">Tài khoản hoặc mật khẩu không chính xác</p>
+      <input type="button" class="btn-dangnhap" value="Đăng nhập" onclick="login()">
+      <div class="forgotpassword">
+         <label>
+            <input type="checkbox" name="checkbox1" value="value1" class = "checkbox"> Ghi nhớ đăng nhập
+         </label>
+         <span class="link">
+            <a href="forgotpassword.html"> Quên mật khẩu</a>
+         </span>
+
+      </div>
+      <div class="link" , id="register">Chưa có tài khoản, <a href="register.html">Đăng Ký</a></div>
+      <div class="copyright">
+         <a href="https://github.com/Maybetuandat"> <img class="git" src="../img/git.png"> </a>
+         <a href="https://www.facebook.com/maybetuandat"> <img class="git" src="../img/fb.png"> </a>
+         <a href="https://www.linkedin.com/in/tr%E1%BB%8Bnh-vinh-tu%E1%BA%A5n-%C4%91%E1%BA%A1t-undefined-567489289">
+            <img class="git" src="../img/linked.png"> </a>
+      </div>
+   </div>
+</body>
+
+</html>

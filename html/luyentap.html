@@ -1,35 +1,55 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
     <link rel="stylesheet" href="../css/luyentap.css" />
     <link rel="stylesheet" href="../css/game.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
+    <div class="dialog-overlay" id="dialogOverlay"></div>
+
+    <!-- Nội dung của dialog -->
+    <div class="dialog-content" id="dialogContent">
+        <h2 class="sent" id="content-dialog">Cảm ơn bạn đã tham gia khảo sát</h2>
+        <p class="sent" id="question-dialog">Câu trả lời của bạn đã được gửi đi.</p>
+        <div class="footer-dialog">
+            <button id="btn-close" onclick="closeDialog()">Đóng</button>
+            <button id="btn-continue">Tiếp tục</button>
+        </div>
+    </div>
     <div class="header">
         <div class="nav-logo">
-
             <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
-
         </div>
         <div class="header-title">
             PTIT TEST
         </div>
-
-    
-
         <div class="avt-logo">
+            <div class="notice">
+                <a onclick="showNotification()">
+                    <img src="../img/notification.png" alt="">
+                </a>
+            </div>
+            <div class="img-avt">
+                <a onclick="showInfor()">
+                    <img class="avt" src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div class="infor-content">
 
-            <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+        </div>
+        <div class="notice-content">
 
         </div>
     </div>
 
-    
+
     <div id="container">
-        <h1>Xin chào,</h1>
-        <h2>Tổng hợp các đề trắc nghiệm</h2>
         <div id="luachon">
             <button id="btn-lt" class="btn-tt" onclick="showLuyentap()">Luyện tập</button>
             <button id="btn-thi" class="btn-tt" onclick="showThi()">Thi thử</button>
@@ -97,7 +117,8 @@
         </div>
     </div>
 
-    
+
     <script src="../javascript/luyentap.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistic</title>
+    <link rel="stylesheet" href="../css/static.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+   
+</head>
+<body>
+    <!-- thanh tìm kiếm -->
+    <div id = "content">
+    <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search..." autocomplete="on"> 
+    
+    <!-- bảng hiển thị thống kê -->
+    <table class="display" id="table" style="width: 100%;">
+            <thead id="tableHead"> </thead>
+            <tbody id="tableBody" > </tbody>
+            
+    </table>
+    <h1>Thống kê chi tiết</h1>
+      <canvas id="myChart" width="800" height="400"></canvas>
+      <div> <button class="downloadpdf"  onclick="exportToPDF()">Convert to pdf</button>
+       <button  onclick="exportToExcel()">Convert to excel</button></div>
+
+    </div>    
+    <script src="../script/static.js"> </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+</body>
+</html>
