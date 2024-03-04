@@ -400,10 +400,15 @@ p {
 
 .add-new-student-container,
 .edit-student-container {
-    /* position: fixed; */
-    width: 100%px;
-    height: 100%px;
-    margin: 100px 20px;
+    position: fixed;
+    /* width: 100%; */
+    /* height: 100%;  */
+    /* left: 50%; */
+    /* right: 50%; */
+    /* transform: translate(-50%, -50%); Dịch chuyển div lùi lại 50% chiều ngang và 50% chiều dọc của chính nó */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 80px;
 
     background-color: #fffbfb;
@@ -415,7 +420,7 @@ p {
 .add-new-student-container h1,
 .edit-student-container h1 {
     font-size: 26px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     margin-bottom: 20px;
     color: #000;
 }
