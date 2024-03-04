@@ -231,7 +231,7 @@ p {
     z-index: 1;
     display: flex;
     justify-items: center;
-    height: 10%;
+    height: 70px;
 }
 
 .nav-logo {
