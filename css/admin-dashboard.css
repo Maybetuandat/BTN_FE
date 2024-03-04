@@ -17,6 +17,38 @@ body {
     background-color: #f0f0f0;
 }
 
+@media only screen and (max-width: 945px) {
+    .fix-call {
+        display: none;
+    }
+
+    .main-container {
+        width: 200%;
+        /* display: flex; */
+        margin-left: 0px;
+
+    }
+
+    table th,
+    table td {
+
+        text-align: left;
+        /* Căn chữ sang trái */
+    }
+
+    .modal-content {
+        width: 700px;
+    }
+
+    .nav-element {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex !important;
+    }
+}
+
 .yellow-text {
     color: #ad171c;
 }
@@ -45,6 +77,15 @@ body {
 
 }
 
+.menu-button {
+    display: none;
+    position: absolute;
+    right: 100px;
+    font-size: 26px;
+    justify-items: center;
+    margin-top: 15px;
+}
+
 .img-logo {
     background-color: #fff;
     border-radius: 50%;
@@ -60,9 +101,6 @@ body {
     width: 40px;
     height: 40px;
     display: block;
-
-
-
 }
 
 .nav {
