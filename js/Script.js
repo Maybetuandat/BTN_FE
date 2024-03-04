@@ -9,7 +9,12 @@ function showPopup() {
 function onNotiButtonClicked(){
     
 }
-
+function showAll()
+{
+  var input = document.getElementById("myInput");
+  input.value = "";
+  Search();
+}
 function onShowDetailClicked(){
   //show popUp
   showPopup();

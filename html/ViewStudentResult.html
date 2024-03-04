@@ -25,7 +25,7 @@
         <div class="nav">
             <div class="nav-element"><a href="admin-dashboard.html">Ngân hàng đề thi</a></div>
             <div class="nav-element"><a href="#">Kết quả</a></div>
-            <div class="nav-element"><a href="">Thống kê</a></div>
+            <div class="nav-element"><a href="statistic.html">Thống kê</a></div>
             <div class="nav-element"><a href="#">Tin tức</a></div>
         </div>
 
@@ -37,7 +37,7 @@
     </div>
 
 
-    <div class="main-container">
+    <div class="main-container fade-in">
         <div>
             <h1>Danh sách sinh viên</h1>
         </div>
@@ -49,6 +49,7 @@
             </select>
             <input type="text" id="myInput" placeholder="Nhập thông tin muốn tìm kiếm">
             <button onclick="Search()">Tìm kiếm</button>
+            <button onclick="showAll()">Hiển thị tất cả</button>
         </div>
         <div class="ngan-cach">
             <hr>
@@ -79,14 +80,14 @@
                 </tr>
                 <tr>
                     <td>B21DCCN105</td>
-                    <td>Nguyễn Anh Quân</td>
+                    <td>Hoàng Anh Vũ</td>
                     <td>05/03/2003</td>
                     <td>Nam</td>
                     <td><button onclick="showPopup()">Xem chi tiết</button></td>
                 </tr>
                 <tr>
                     <td>B21DCCN103</td>
-                    <td>Nguyễn Anh Quân</td>
+                    <td>Nguyễn Hoàng Hiệp</td>
                     <td>05/03/2003</td>
                     <td>Nam</td>
                     <td><button onclick="showPopup()">Xem chi tiết</button></td>
@@ -130,7 +131,7 @@
 
         </div>
     </div>
-    <div id="popUp" class="fade-in">
+    <div id="popUp" class="fade-in hidden">
         <div class="popup-content">
             <div class="popup-header">
                 <h2>Thông tin chi tiết</h2>
@@ -175,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" popup-body-right">
+                <div class="popup-body-right">
                     <div>
                         <h3 style="text-align: center;margin-bottom:10px">Danh sách bài thi đã làm</h3>
                     </div>

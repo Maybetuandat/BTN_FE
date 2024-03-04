@@ -257,9 +257,9 @@ myFilter = () => {
 
 
 function showNotification() {
-    alert('Chưa bắt đầu');
-        let notification = document.getElementById('notification');
-        notification.style.display = 'flex';
+    let notification = document.getElementById('notification');
+    notification.style.display = 'block';
+    
 }
 
 function showInfor(){

@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,26 +7,54 @@
     <link rel="stylesheet" href="../css/static.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
-   
-</head>
-<body>
-    <!-- thanh tìm kiếm -->
-    <div id = "content">
-    <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search..." autocomplete="on"> 
-    
-    <!-- bảng hiển thị thống kê -->
-    <table class="display" id="table" style="width: 100%;">
-            <thead id="tableHead"> </thead>
-            <tbody id="tableBody" > </tbody>
-            
-    </table>
-    <h1>Thống kê chi tiết</h1>
-      <canvas id="myChart" width="800" height="400"></canvas>
-      <div> <button class="downloadpdf"  onclick="exportToPDF()">Convert to pdf</button>
-       <button  onclick="exportToExcel()">Convert to excel</button></div>
 
-    </div>    
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="nav-logo">
+            <a href="#">
+                <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo">
+                </div>
+            </a>
+        </div>
+        <div class="header-title">
+            <a href="#">PTIT TEST</a>
+        </div>
+
+        <div class="nav">
+            <div class="nav-element"><a href="admin-dashboard.html">Ngân hàng đề thi</a></div>
+            <div class="nav-element"><a href="ViewStudentResult.html">Kết quả</a></div>
+            <div class="nav-element"><a href="#">Thống kê</a></div>
+            <div class="nav-element"><a href="#">Tin tức</a></div>
+        </div>
+
+        <div class="avt-logo">
+            <a href="#">
+                <div class="img-avt"> <img src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo"></div>
+            </a>
+        </div>
+    </div>
+    <!-- thanh tìm kiếm -->
+    <div id="content" class="main-container fade-in">
+        <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search..." autocomplete="on">
+
+        <!-- bảng hiển thị thống kê -->
+        <table class="display" id="table" style="width: 100%;">
+            <thead id="tableHead"> </thead>
+            <tbody id="tableBody"> </tbody>
+
+        </table>
+        <h1>Thống kê chi tiết</h1>
+        <canvas id="myChart" width="800" height="400"></canvas>
+        <div> <button class="downloadpdf" onclick="exportToPDF()">Convert to pdf</button>
+            <button onclick="exportToExcel()">Convert to excel</button>
+        </div>
+
+    </div>
     <script src="../script/static.js"> </script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
 </body>
+
 </html>
