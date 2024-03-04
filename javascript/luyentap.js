@@ -252,14 +252,28 @@ myFilter = () => {
               }
         
       }
+var popup = document.getElementById('noti');
 
+document.addEventListener('click', function(event) {
+    var isClickInsidePopup = popup.contains(event.target);
 
+    if (!isClickInsidePopup) {
+        let notification = document.getElementById('notification');
+        if(!notification.classList.contains('hidden')) {
+            notification.classList.add('hidden');
+        }
 
+    }
+});
 
 function showNotification() {
     let notification = document.getElementById('notification');
-    notification.style.display = 'block';
-    
+    if(notification.classList.contains('hidden')) {
+        notification.classList.remove('hidden');
+    }
+    else {
+        notification.classList.add('hidden');
+    }
 }
 
 function showInfor(){
@@ -282,4 +296,39 @@ function openDialog(tittle, content, func) {
 function closeDialog() {
     dialogOverlay.style.display = 'none';
     dialogContent.style.display = 'none';
+}
+
+
+var popup2 = document.getElementById('block-infor');
+
+document.addEventListener('click', function(event) {
+    var isClickInsidePopup = popup2.contains(event.target);
+
+    if (!isClickInsidePopup) {
+        let notification = document.getElementById('infor-user');
+        if(!notification.classList.contains('hidden')) {
+            notification.classList.add('hidden');
+        }
+
+    }
+});
+
+function showInforUser() {
+    let notification = document.getElementById('infor-user');
+    if(notification.classList.contains('hidden')) {
+        notification.classList.remove('hidden');
+    }
+    else {
+        notification.classList.add('hidden');
+    }
+}
+function closePopUpInfor()
+{
+    var notification = document.getElementById('edit-student');
+    notification.classList.add('hidden');
+}
+function showPopupInfor()
+{
+    var notification = document.getElementById('edit-student');
+    notification.classList.remove('hidden');
 }
