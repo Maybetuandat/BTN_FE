@@ -29,25 +29,75 @@
             PTIT TEST
         </div>
         <div class="avt-logo">
-            <div class="notice">
+            <div class="notice" id="noti">
                 <a onclick="showNotification()">
                     <img src="../img/notification.png" alt="">
                 </a>
+                <!-- notice content -->
+                <div class="notice-content hidden" id="notification">
+                    <div class="notice-item">
+                        <p>Thông báo 1</p>
+                    </div>
+                    <div class="notice-item">
+                        <p>Thông báo 2</p>
+                    </div>
+                    <div class="notice-item">
+                        <p>Thông báo 3</p>
+                    </div>
+                </div>
             </div>
-            <div class="img-avt">
-                <a onclick="showInfor()">
+            <div class="img-avt" id="block-infor">
+                <a onclick="showInforUser()">
                     <img class="avt" src="https://code.ptit.edu.vn/2020/images/avt.png" alt="Logo">
                 </a>
+                <div class="infor-content hidden" id="infor-user">
+                    <div class="notice-item">
+                        <a onclick="showPopupInfor()">
+                            <p style="color: rgb(143, 231, 111);">Thông tin</p>
+                        </a>
+                    </div>
+                    <div class="notice-item">
+                        <a href="loginuser.html">
+                            <p style="color: red;">Đăng xuất</p>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="infor-content">
-
-        </div>
-        <div class="notice-content">
-
         </div>
     </div>
 
+    <div class="edit-student hidden" id="edit-student">
+        <div class="edit-student-container">
+
+            <h1>Thông tin người dùng</h1>
+            <div>
+                <label>Mã sinh viên</label>
+                <input type="text" value="B21DCCN795" required>
+            </div>
+
+            <div>
+                <label>Họ và tên</label>
+                <input type="text" value="Hoàng Anh Vũ">
+            </div>
+
+            <div>
+                <label>Lớp</label>
+                <input type="text" value="D21CQCN03-B">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" value="VuHA.B21CN795@stu.ptit.edu.vn">
+            </div>
+            <div>
+                <label>Mật khẩu</label>
+                <input type="password" value="000000000" required>
+            </div>
+
+            <div style="justify-items: center; text-align: center;">
+                <button class="btn-vaothi" style="width: 150px;" onclick="closePopUpInfor()">Đóng</button>
+            </div>
+        </div>
+    </div>
 
     <div id="container">
         <div id="luachon">

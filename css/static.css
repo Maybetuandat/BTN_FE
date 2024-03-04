@@ -29,3 +29,144 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  /* font-family: 'Unbounded', sans-serif; */
+  background-color: #f0f0f0;
+  display: block;
+}
+
+.yellow-text {
+  color: #ad171c;
+}
+
+.green-text {
+  color: #008000;
+}
+
+/* Header Styles */
+.header {
+
+  position: fixed;
+  width: 100%;
+  background-color: #ad171c;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  justify-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  /* justify-items: center; */
+
+}
+
+.img-logo {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+
+  margin-left: 15px;
+  /* Đặt khoảng cách bao quanh hình ảnh */
+}
+
+
+
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+  display: block;
+
+
+
+}
+
+.nav {
+  display: flex;
+  position: absolute;
+  font-size: 20px;
+  right: 200px;
+}
+
+.nav-element {
+  margin: 15px 20px;
+}
+
+.avt-logo {
+  display: flex;
+  position: absolute;
+  right: 30px;
+  justify-items: center;
+  margin-top: 6px;
+}
+
+.img-avt {
+  background-color: #fff;
+  border-radius: 50%;
+  /* padding: 5px; */
+
+  margin-left: 10px;
+  /* Đặt khoảng cách bao quanh hình ảnh */
+}
+
+.avt-logo img {
+  width: 40px;
+  height: 40px;
+  display: block;
+
+
+
+}
+
+.header-title {
+  display: flex;
+  font-size: 24px;
+  margin-left: 30px;
+  font-weight: 550;
+  text-align: center;
+}
+
+.header-title a {
+  display: flex;
+  align-items: center;
+
+}
+
+
+/* Test List Styles */
+.main-container {
+
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 100px;
+
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+
+
+
+a {
+  text-decoration: none;
+  color: #fff !important;
+}
