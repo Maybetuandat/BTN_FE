@@ -44,6 +44,7 @@ var myChart = new Chart(ctx, {
 });
 }
 buildchart();
+
 function exportToPDF()
 {
   const content = document.getElementById('header');
