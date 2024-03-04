@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="header">
+    <div class="header" id = "header">
         <div class="nav-logo">
             <a href="#">
                 <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo">
@@ -68,21 +68,21 @@
                     <td>1</td>
                     <td>Nguyễn Văn A</td>
                     <td>Kỳ thi 1</td>
-                    <td>Toán</td>
+                    <td>Văn</td>
                     <td>9.5</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Nguyễn Văn B</td>
                     <td>Kỳ thi 1</td>
-                    <td>Toán</td>
+                    <td>Sử</td>
                     <td>8.5</td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Nguyễn Văn C</td>
                     <td>Kỳ thi 1</td>
-                    <td>Toán</td>
+                    <td>Địa</td>
                     <td>7.5</td>
                 </tr>
                 <tr>
@@ -117,10 +117,12 @@
 
         </div>
     </div>
-    <h1>Thống kê chi tiết</h1>
-    <canvas id="myChart" width="800" height="400"></canvas>
-    <div> <button class="downloadpdf" onclick="exportToPDF()">Convert to pdf</button>
-        <button onclick="exportToExcel()">Convert to excel</button>
+    
+    <h1 class = "thongke">Thống Kê Chi Tiết</h1>
+    <canvas id="myChart"></canvas>
+    <div class="xuat"> 
+        <span><button class="downloadpdf"    onclick="exportToPDF()">PDF</button> </span>
+        <span> <button  class = "downloadexcel" onclick="exportToExcel()">EXCEL</button> </span>
     </div>
 
     </div>

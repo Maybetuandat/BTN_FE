@@ -12,14 +12,45 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.thongke{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.xuat{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+
+.downloadpdf{
+  background-color:  #ad171c;
+  color: white;
+  width: 60px;
+}
+.downloadexcel{
+  background-color:  #ad171c;
+  color: white;
+  width: 80px;
+}
 .ngan-cach {
   display: block;
   clear: both;
   width: 100%;
 }
-
+#myChart{
+     /* padding-left: 300px;
+    padding-right: 300px; */
+     padding-top: 20px;
+     padding-bottom: 20px;
+     height: 500px !important ;
+     width: 900px !important;
+     margin :0 auto;
+}
 .hidden {
-  display: none !important;
+  display: none ;
 }
 .detail-list th{
   /* background-color:  */
