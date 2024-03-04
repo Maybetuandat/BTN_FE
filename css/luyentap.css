@@ -351,6 +351,7 @@ p {
     margin-right: 0px;
     width: 120px;
     height: 50px;
+    font-size: 14px;
     transition: 0.4s;
   }
   #btn-close:hover{
@@ -366,6 +367,7 @@ p {
     cursor: pointer;
     height: 50px;
     margin: 10px;
+    font-size: 14px;
     transition: 0.4s;
   }
   #btn-continue:hover{
@@ -399,9 +401,9 @@ p {
 .add-new-student-container,
 .edit-student-container {
     /* position: fixed; */
-    width: 600px;
-    height: 600px;
-    margin: 100px auto;
+    width: 100%px;
+    height: 100%px;
+    margin: 100px 20px;
     padding: 80px;
 
     background-color: #fffbfb;
@@ -503,12 +505,18 @@ p {
     width: fit-content;
     justify-content: center;
 }
+.fa-bell {
+    position: relative;
+    color: white;
+    top: 8px;
+    font-size: 25px;
+}
 .notice-content, .infor-content{
+    position: fixed;
     display: block;
-    width: 200px;
+    width: 180px;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
-    position: fixed; /* Sử dụng fixed để giữ nguyên vị trí khi cuộn trang */
     height: 150px;
     border-radius: 10px;
     font-weight: bold;
@@ -516,25 +524,16 @@ p {
     box-shadow: 3px 3px 3px rgb(148, 151, 151);
     
     /* Căn giữa theo chiều ngang và dọc */
-    top: 22%;
-    left: 92%;
-    transform: translate(-50%, -50%);
+    top: 60px;
+    right: 60px;
+    /* transform: translate(-50%, -50%); */
 }
+
 .infor-content{
-    display: block;
     width: 200px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    position: fixed; /* Sử dụng fixed để giữ nguyên vị trí khi cuộn trang */
+
     height: 100px;
-    border-radius: 10px;
-    font-weight: bold;
-    z-index: 2;
-    box-shadow: 3px 3px 3px rgb(148, 151, 151);
-    /* Căn giữa theo chiều ngang và dọc */
-    top: 18%;
-    left: 92%;
-    transform: translate(-50%, -50%);
+    right: 20px;
 }
 .notice-item{
     display: flex;
