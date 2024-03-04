@@ -51,7 +51,7 @@ function login() {
         return user.username === username && user.password === password;
     });
     if (found) {
-        window.location.href = "../html/luyentap.html"; // điều hướng ra trang admin
+        window.location.href = "./html/luyentap.html"; // điều hướng ra trang admin
     } else {
         var notice = document.getElementById("notice");
         notice.classList.remove("hidden")
